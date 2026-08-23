@@ -1,0 +1,1 @@
+Drop your rinkuben logo (logo.png), Instagram graphics (post1.jpg), and reels (reel.mp4) here.

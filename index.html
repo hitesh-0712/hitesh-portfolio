@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitesh Sadhu — AI-Powered IT & Digital Solutions Specialist</title>
+  <meta name="description" content="Hitesh Sadhu — AI-Powered IT & Digital Solutions Specialist based in Ahmedabad. Specializing in Web Development, AI Workflows, Meta Advertising, and Creative Technology.">
+  <meta name="keywords" content="Hitesh Sadhu, Web Developer Ahmedabad, AI Specialist, Triosh Digital Solutions, Digital Marketing, Meta Ads, Local SEO">
+  <meta property="og:title" content="Hitesh Sadhu — AI-Powered IT & Digital Solutions Specialist">
+  <meta property="og:description" content="Practical digital solutions that scale modern businesses. Web Dev • AI • Digital Marketing • Creative Tech.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lenis for smooth inertia scrolling -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  
+  <!-- Custom Monogram Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23e26027'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor Elements -->
+  <div id="custom-cursor"></div>
+  <div id="cursor-follower"><span id="cursor-label"></span></div>
+
+  <!-- Background Canvas for Video Scrubbing -->
+  <canvas id="scroll-canvas"></canvas>
+  <div class="canvas-overlay"></div>
+
+  <!-- Minimal Preloader -->
+  <div id="loader">
+    <div class="loader-content">
+      <span class="loader-title">HITESH SADHU</span>
+      <div class="loader-bar">
+        <div id="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Navigation Bar with ScrollSpy -->
+  <header class="floating-header">
+    <a href="#hero" class="nav-brand-wrap">
+      <span class="brand-monogram">HS</span>
+      <span class="nav-brand">HITESH SADHU</span>
+    </a>
+
+    <nav class="nav-center-pill" id="navbar-links">
+      <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills & AI</a>
+      <a href="#projects" class="nav-link" data-section="projects">Clients</a>
+      <a href="#startup" class="nav-link" data-section="startup">Startup</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-right-actions">
+      <a href="https://www.linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" rel="noopener noreferrer" class="nav-social-btn" title="Connect on LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+
+      <button class="nav-cta-btn open-contact-modal-btn" type="button">
+        <span>Start a Project</span>
+        <span class="cta-arrow-circle">↗</span>
+      </button>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu-drawer" class="mobile-menu-drawer" aria-hidden="true">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-top">
+        <div class="mobile-brand">
+          <span class="brand-monogram">HS</span>
+          <span class="nav-brand">HITESH SADHU</span>
+        </div>
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">✕</button>
+      </div>
+
+      <!-- Mobile Ask AI Banner -->
+      <button class="mobile-drawer-ai-btn open-ai-modal-btn" type="button">
+        <div class="drawer-ai-left">
+          <span class="ai-sparkle-big">✨</span>
+          <div>
+            <strong>Ask AI About Hitesh</strong>
+            <small>Ask skills, projects, pricing & rates</small>
+          </div>
+        </div>
+        <span class="drawer-ai-arrow">↗</span>
+      </button>
+
+      <nav class="mobile-nav-list" id="mobile-nav-links">
+        <a href="#hero" class="mobile-nav-link active" data-section="hero">
+          <span class="link-num">01</span>
+          <span class="link-name">Home</span>
+          <span class="link-arr">→</span>
+        </a>
+        <a href="#about" class="mobile-nav-link" data-section="about">
+          <span class="link-num">02</span>
+          <span class="link-name">About Me</span>
+          <span class="link-arr">→</span>
+        </a>
+        <a href="#skills" class="mobile-nav-link" data-section="skills">
+          <span class="link-num">03</span>
+          <span class="link-name">Skills & AI Stack</span>
+          <span class="link-arr">→</span>
+        </a>
+        <a href="#projects" class="mobile-nav-link" data-section="projects">
+          <span class="link-num">04</span>
+          <span class="link-name">Client Projects</span>
+          <span class="link-arr">→</span>
+        </a>
+        <a href="#startup" class="mobile-nav-link" data-section="startup">
+          <span class="link-num">05</span>
+          <span class="link-name">Triosh Startup</span>
+          <span class="link-arr">→</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link" data-section="contact">
+          <span class="link-num">06</span>
+          <span class="link-name">Contact & Inquiry</span>
+          <span class="link-arr">→</span>
+        </a>
+      </nav>
+
+      <div class="mobile-menu-footer">
+        <button class="btn-primary-copper open-contact-modal-btn" type="button" style="width:100%; justify-content:center;">
+          <span>Start a Project</span>
+          <span class="btn-arrow-circle">↗</span>
+        </button>
+        <div class="mobile-social-row">
+          <a href="https://wa.me/917990803065?text=Hi%20Hitesh,%20I%20saw%20your%20portfolio." target="_blank" rel="noopener noreferrer" class="mobile-social-pill">
+            <span>💬 WhatsApp</span>
+          </a>
+          <a href="https://www.linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" rel="noopener noreferrer" class="mobile-social-pill">
+            <span>🔗 LinkedIn</span>
+          </a>
+          <a href="tel:+917990803065" class="mobile-social-pill">
+            <span>📞 Call</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Website Container -->
+  <div class="page-container">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Upper Layer: Symmetrical Display Name framing the head -->
+      <div class="hero-title-layer">
+        <div class="hero-top-tag">
+          <span>AI-POWERED IT & DIGITAL SOLUTIONS SPECIALIST</span>
+        </div>
+        <h1 class="hero-main-title">
+          <span class="title-left">Hitesh</span>
+          <span class="title-right">Sadhu</span>
+        </h1>
+      </div>
+
+      <!-- Lower Layer: Actions & Specialization -->
+      <div class="hero-bottom-grid">
+        
+        <!-- Left Hero Pitch & CTA -->
+        <div class="hero-left-actions reveal-on-scroll">
+          <div class="trust-badge">
+            <span class="star-accent">✦</span>
+            <span>Web Dev • AI • Digital Marketing • Creative Tech</span>
+          </div>
+          
+          <h2 class="hero-pitch">
+            Practical digital solutions<br>that scale modern businesses
+          </h2>
+
+          <p class="hero-desc-short">
+            I combine web development, digital marketing, creative design and artificial intelligence to build high-impact digital systems.
+          </p>
+
+          <div class="hero-btn-group">
+            <button class="btn-primary-copper open-contact-modal-btn" type="button">
+              <span>Start a Project</span>
+              <span class="btn-arrow-circle">↗</span>
+            </button>
+            
+            <a href="#projects" class="btn-ghost-link">
+              <span>View Client Work</span>
+              <span class="btn-arrow-subtle">↘</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Spacer for Canvas Visual -->
+        <div class="hero-center-spacer"></div>
+
+        <!-- Right Floating Credibility Glass Card -->
+        <div class="hero-right-review-card reveal-on-scroll delay-1">
+          <div class="card-glow-accent"></div>
+          
+          <div class="card-top-tag">✦ CREDENTIALS & EXPERIENCE</div>
+
+          <p class="review-card-text">
+            <strong>B.E. — Information Technology</strong><br>
+            Founder @ Triosh Digital Solutions • Freelance IT Specialist
+          </p>
+
+          <div class="review-pills-row">
+            <span class="mini-pill">Real-World Projects</span>
+            <span class="mini-pill">AI Workflows</span>
+            <a href="https://www.linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" rel="noopener noreferrer" class="mini-pill linkedin-pill">
+              <span>LinkedIn ↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Infinite Running Marquee Stat Ticker -->
+    <div class="marquee-ticker-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>WEB DEVELOPMENT</span>
+          <span class="marquee-star">✦</span>
+          <span>AI-POWERED WORKFLOWS</span>
+          <span class="marquee-star">✦</span>
+          <span>META ADS & LOCAL SEO</span>
+          <span class="marquee-star">✦</span>
+          <span>TRIOSH DIGITAL SOLUTIONS</span>
+          <span class="marquee-star">✦</span>
+          <span>BRAND IDENTITY</span>
+          <span class="marquee-star">✦</span>
+          <span>CREATIVE TECHNOLOGY</span>
+          <span class="marquee-star">✦</span>
+        </div>
+        <div class="marquee-content">
+          <span>WEB DEVELOPMENT</span>
+          <span class="marquee-star">✦</span>
+          <span>AI-POWERED WORKFLOWS</span>
+          <span class="marquee-star">✦</span>
+          <span>META ADS & LOCAL SEO</span>
+          <span class="marquee-star">✦</span>
+          <span>TRIOSH DIGITAL SOLUTIONS</span>
+          <span class="marquee-star">✦</span>
+          <span>BRAND IDENTITY</span>
+          <span class="marquee-star">✦</span>
+          <span>CREATIVE TECHNOLOGY</span>
+          <span class="marquee-star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Me Statement Section -->
+    <section class="about-statement-section" id="about">
+      <div class="about-grid">
+        
+        <!-- Left Section Tag & Live Studio Radar -->
+        <div class="about-tag-col reveal-on-scroll">
+          <div class="pill-section-tag">• About Me</div>
+          
+          <!-- Live Ahmedabad Studio Radar Widget -->
+          <div class="live-studio-radar-card">
+            <div class="radar-header">
+              <span class="live-radar-dot"></span>
+              <span class="radar-status-txt">STUDIO ACTIVE</span>
+            </div>
+            <div class="radar-city">📍 Ahmedabad, Gujarat</div>
+            <div class="radar-clock" id="live-ahmedabad-time">--:--:-- IST</div>
+            <div class="radar-meta-badge">🟢 Available for Client Projects</div>
+          </div>
+        </div>
+
+        <!-- Right Big Statement, Philosophy & Pillars -->
+        <div class="about-content-col reveal-on-scroll delay-1">
+          <p class="about-editorial-statement">
+            I am an IT professional and freelance digital solutions specialist with hands-on experience in <strong>web development, digital marketing, branding, creative production and AI-powered workflows</strong>.
+          </p>
+
+          <p class="about-secondary-text">
+            I work on real-world business projects and combine technology, creativity, marketing and AI to create useful, revenue-driving digital solutions. My experience spans websites, Meta ad campaigns, brand communication, local SEO, Google Business Profile optimization, and AI video/graphics production.
+          </p>
+
+          <!-- Personal Philosophy & Handwritten Signature Card -->
+          <div class="personal-philosophy-card">
+            <div class="philosophy-quote-mark">“</div>
+            <p class="philosophy-text">
+              Engineering taught me how code & systems scale. Marketing taught me how human psychology converts. I combine both with AI workflows to build practical solutions that actually grow businesses.
+            </p>
+            <div class="philosophy-footer">
+              <div class="philosophy-author">
+                <strong>Hitesh Sadhu</strong>
+                <span>B.E. IT • Founder @ Triosh Digital Solutions</span>
+              </div>
+              <div class="philosophy-badge">
+                <span class="badge-dot">✦</span>
+                <span>AHMEDABAD, INDIA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Core Strengths Pillars -->
+          <div class="core-strengths-grid">
+            <div class="strength-card">
+              <div class="strength-icon">💻</div>
+              <h4>Technology</h4>
+              <p>Full-stack web development, responsive architectures, and business automation.</p>
+            </div>
+            <div class="strength-card">
+              <div class="strength-icon">🤖</div>
+              <h4>Artificial Intelligence</h4>
+              <p>AI prompt engineering, generative video/images (Gemini Flow, Midjourney) and AI workflows.</p>
+            </div>
+            <div class="strength-card">
+              <div class="strength-icon">📈</div>
+              <h4>Digital Marketing</h4>
+              <p>Meta ads, local SEO, Google Business Profile growth, and performance marketing.</p>
+            </div>
+            <div class="strength-card">
+              <div class="strength-icon">🎨</div>
+              <h4>Creative & Design</h4>
+              <p>Brand identity, video scriptwriting, social media reels, and visual storytelling.</p>
+            </div>
+          </div>
+
+          <div class="about-actions-row">
+            <button class="btn-primary-copper open-contact-modal-btn" type="button">
+              <span>Start a Project</span>
+              <span class="btn-arrow-circle">↗</span>
+            </button>
+            
+            <button class="btn-tech-specs open-specs-modal-btn" type="button">
+              <span>🛠️ Inspect Tech Specs</span>
+            </button>
+
+            <a href="#skills" class="btn-ghost-link">
+              <span>Explore My AI & Tech Stack</span>
+              <span class="btn-arrow-subtle">↘</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills & AI Stack Matrix Section -->
+    <section class="skills-matrix-section" id="skills">
+      <div class="skills-section-header reveal-on-scroll">
+        <div class="pill-section-tag">• Core Expertise & Toolset</div>
+        <h2 class="skills-section-heading">Skills, Specializations & AI Stack</h2>
+      </div>
+
+      <div class="skills-category-grid">
+        
+        <!-- Category 1: Web Development -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="cat-header">
+            <span class="cat-icon">🌐</span>
+            <h3>Web Development</h3>
+          </div>
+          <div class="skill-tags-wrap">
+            <span class="skill-badge">HTML5 / CSS3</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Next.js</span>
+            <span class="skill-badge">Tailwind CSS</span>
+            <span class="skill-badge">Responsive UI/UX</span>
+            <span class="skill-badge">Business Websites</span>
+            <span class="skill-badge">Landing Pages</span>
+            <span class="skill-badge">Website Deployment</span>
+            <span class="skill-badge">Domain & Hosting</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Digital Marketing -->
+        <div class="skill-category-card reveal-on-scroll delay-1">
+          <div class="cat-header">
+            <span class="cat-icon">🎯</span>
+            <h3>Digital Marketing</h3>
+          </div>
+          <div class="skill-tags-wrap">
+            <span class="skill-badge">Meta Ads</span>
+            <span class="skill-badge">Social Media Marketing</span>
+            <span class="skill-badge">Local SEO</span>
+            <span class="skill-badge">Google Business Profile (GBP)</span>
+            <span class="skill-badge">Google Maps Optimization</span>
+            <span class="skill-badge">Lead Generation</span>
+            <span class="skill-badge">Instagram Growth</span>
+            <span class="skill-badge">Performance Marketing</span>
+            <span class="skill-badge">Digital Consulting</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Creative & Design -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="cat-header">
+            <span class="cat-icon">🎨</span>
+            <h3>Creative & Content</h3>
+          </div>
+          <div class="skill-tags-wrap">
+            <span class="skill-badge">Brand Identity</span>
+            <span class="skill-badge">Graphic Design</span>
+            <span class="skill-badge">Ad Creative Design</span>
+            <span class="skill-badge">Video Scriptwriting</span>
+            <span class="skill-badge">Reels & Short-form Content</span>
+            <span class="skill-badge">Promotional Videos</span>
+            <span class="skill-badge">Visual Storytelling</span>
+            <span class="skill-badge">Creative Direction</span>
+          </div>
+        </div>
+
+        <!-- Category 4: AI & Workflows -->
+        <div class="skill-category-card reveal-on-scroll delay-1">
+          <div class="cat-header">
+            <span class="cat-icon">🤖</span>
+            <h3>AI Tools & Workflows</h3>
+          </div>
+          <div class="skill-tags-wrap">
+            <span class="skill-badge">ChatGPT</span>
+            <span class="skill-badge">Google Gemini</span>
+            <span class="skill-badge">Gemini Flow (AI Video)</span>
+            <span class="skill-badge">Claude</span>
+            <span class="skill-badge">AI Prompt Engineering</span>
+            <span class="skill-badge">AI Image Generation</span>
+            <span class="skill-badge">AI Video & Motion Workflows</span>
+            <span class="skill-badge">AI-Assisted Web Dev</span>
+            <span class="skill-badge">Workflow Automation</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Client Experience / Real Projects Section -->
+    <section class="selected-projects-section" id="projects">
+      
+      <!-- Section Header -->
+      <div class="projects-section-header reveal-on-scroll">
+        <div class="pill-section-tag">• Client Experience</div>
+        <h2 class="projects-section-heading">Real-World Business Client Projects</h2>
+      </div>
+
+      <!-- 2-Column Staggered Grid of 4 Real Clients -->
+      <div class="staggered-projects-grid">
+        
+        <!-- Column Left -->
+        <div class="project-col project-col-left">
+          
+          <!-- Client 1: Fitlady Western Wear -->
+          <article class="project-card tilt-card reveal-on-scroll" data-project-id="1">
+            <div class="project-card-visual card-bg-fitlady">
+              <div class="card-glare-effect"></div>
+              <div class="watermark-bg-text">FASHION</div>
+              <div class="mockup-display fashion-client-mockup">
+                <div class="client-brand-badge">FITLADY</div>
+                <div class="client-sub-info">Western Wear & Retail Growth</div>
+                <div class="client-tags-row">
+                  <span>Meta Ads</span>
+                  <span>Social Marketing</span>
+                  <span>Creative Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-meta">
+              <h3 class="project-title">Fitlady Western Wear</h3>
+              <p class="project-desc">Social Media Marketing, Meta Advertising, Promotional Content & Local Business Growth.</p>
+              <div class="project-card-footer-row">
+                <span class="project-category-pill">Fashion & Retail</span>
+                <span class="project-view-cta">View Case Study ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Client 3: Ramdev Glass & Aluminium -->
+          <article class="project-card tilt-card reveal-on-scroll delay-1" data-project-id="3">
+            <div class="project-card-visual card-bg-ramdev">
+              <div class="card-glare-effect"></div>
+              <div class="watermark-bg-text">MANUFACTURING</div>
+              <div class="mockup-display mfg-client-mockup">
+                <div class="client-brand-badge">RAMDEV</div>
+                <div class="client-sub-info">Glass & Aluminium Solutions</div>
+                <div class="client-tags-row">
+                  <span>Visual Branding</span>
+                  <span>Product Showcase</span>
+                  <span>Promotional Graphics</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-meta">
+              <h3 class="project-title">Ramdev Glass & Aluminium</h3>
+              <p class="project-desc">Brand-focused Creative Design, Product/Material Showcase & Visual Branding.</p>
+              <div class="project-card-footer-row">
+                <span class="project-category-pill">Manufacturing & Industrial</span>
+                <span class="project-view-cta">View Case Study ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Side Callout Quote -->
+          <div class="side-editorial-callout reveal-on-scroll">
+            <p>I combine technology, creativity, marketing and AI to solve real business challenges.</p>
+          </div>
+
+        </div>
+
+        <!-- Column Right (Staggered offset) -->
+        <div class="project-col project-col-right">
+          
+          <!-- Client 2: Ekdant Dental Clinic -->
+          <article class="project-card tilt-card reveal-on-scroll delay-1" data-project-id="2">
+            <div class="project-card-visual card-bg-ekdant">
+              <div class="card-glare-effect"></div>
+              <div class="watermark-bg-text light-blue-text">HEALTHCARE</div>
+              <div class="mockup-display dental-client-mockup">
+                <div class="client-brand-badge">EKDANT</div>
+                <div class="client-sub-info">Dental Clinic & Implant Centre</div>
+                <div class="client-tags-row">
+                  <span>Social Strategy</span>
+                  <span>Branding</span>
+                  <span>Digital Presence</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-meta">
+              <h3 class="project-title">Ekdant Dental Clinic & Implant Centre</h3>
+              <p class="project-desc">Healthcare Branding, Social Media Strategy, Instagram Content & Digital Presence Optimization.</p>
+              <div class="project-card-footer-row">
+                <span class="project-category-pill">Healthcare & Dental</span>
+                <span class="project-view-cta">View Case Study ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Client 4: Rinkuben Khakhrawala -->
+          <article class="project-card tilt-card reveal-on-scroll delay-2" data-project-id="4">
+            <div class="project-card-visual card-bg-rinkuben">
+              <div class="card-glare-effect"></div>
+              <div class="watermark-bg-text">FMCG FOOD</div>
+              <div class="mockup-display food-client-mockup">
+                <div class="client-brand-badge">RINKUBEN</div>
+                <div class="client-sub-info">Khakhrawala & Food Brand</div>
+                <div class="client-tags-row">
+                  <span>Brand Communication</span>
+                  <span>Marketing Content</span>
+                  <span>Social Creatives</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-meta">
+              <h3 class="project-title">Rinkuben Khakhrawala</h3>
+              <p class="project-desc">Social Media Creatives, Promotional Graphics, Brand Communication & Marketing Content.</p>
+              <div class="project-card-footer-row">
+                <span class="project-category-pill">Food & FMCG</span>
+                <span class="project-view-cta">View Case Study ↗</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Startup Experience Feature Section (Triosh Digital Solutions) -->
+    <section class="startup-section reveal-on-scroll" id="startup">
+      <div class="startup-banner-card">
+        <div class="startup-glow"></div>
+        <div class="startup-content">
+          <div class="startup-badge">STARTUP & ENTREPRENEURIAL VENTURE</div>
+          <h2 class="startup-title">Triosh Digital Solutions</h2>
+          <p class="startup-desc">
+            Triosh Digital Solutions is my entrepreneurial startup through which I execute real-world digital projects involving <strong>web development, digital marketing, branding, client growth strategy, creative production, and AI-powered automation workflows</strong>.
+          </p>
+          <div class="startup-tags">
+            <span>Web Development</span>
+            <span>Digital Marketing</span>
+            <span>Social Media Marketing</span>
+            <span>Local SEO & GBP</span>
+            <span>AI Creative Production</span>
+            <span>Business Automation</span>
+          </div>
+          <div class="startup-btn-wrap" style="margin-top: 18px;">
+            <button class="btn-primary-copper open-contact-modal-btn" type="button">
+              <span>Discuss Triosh Project</span>
+              <span class="btn-arrow-circle">↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Contact Banner -->
+    <footer class="portfolio-footer-wrap" id="contact">
+      <div class="footer-banner-card reveal-on-scroll">
+        <div class="footer-copper-glow"></div>
+        
+        <h2 class="footer-heading">
+          Let's Build Something<br>Extraordinary Together.
+        </h2>
+
+        <p class="footer-subtext">
+          Available for web development projects, digital marketing campaigns, local SEO, and AI creative workflows.
+        </p>
+
+        <div class="footer-cta-row">
+          <div class="footer-btn-actions">
+            <button class="btn-primary-copper open-contact-modal-btn" type="button">
+              <span>Send Project Inquiry</span>
+              <span class="btn-arrow-circle">↗</span>
+            </button>
+            
+            <a href="https://wa.me/917990803065?text=Hi%20Hitesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-direct">
+              <span class="wa-icon">💬</span>
+              <span>Chat on WhatsApp</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" rel="noopener noreferrer" class="btn-linkedin-direct">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+          
+          <div class="footer-meta-info">
+            <a href="mailto:contact.hiteshsadhu@gmail.com" class="meta-link">✉️ contact.hiteshsadhu@gmail.com</a>
+            <a href="tel:+917990803065" class="meta-link">📞 +91 7990803065</a>
+            <span>📍 Ahmedabad, Gujarat, India</span>
+          </div>
+        </div>
+
+        <div class="footer-bottom-line">
+          <p>© 2026 Hitesh Sadhu — AI-Powered IT & Digital Solutions Specialist. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Floating Interactive AI Assistant Widget (Apple Intelligence Soundwave Style) -->
+  <div class="floating-ai-widget open-ai-modal-btn" id="floating-ai-widget" role="button" tabindex="0" aria-label="Ask AI Assistant About Hitesh">
+    <div class="ai-widget-pulse-ring"></div>
+    <div class="ai-widget-body">
+      <!-- Live Glowing Siri / Apple Intelligence Soundwave Visualizer -->
+      <div class="ai-soundwave-wrap">
+        <span class="ai-wave-bar bar-1"></span>
+        <span class="ai-wave-bar bar-2"></span>
+        <span class="ai-wave-bar bar-3"></span>
+        <span class="ai-wave-bar bar-4"></span>
+      </div>
+
+      <div class="ai-widget-info">
+        <div class="ai-widget-badge">
+          <span class="ai-live-dot"></span>
+          <span>HITESH AI • ONLINE</span>
+        </div>
+        <div class="ai-typewriter-container">
+          <span class="ai-widget-ticker" id="ai-widget-ticker">Ask AI: "Projects & ROI"</span>
+          <span class="ai-typewriter-cursor"></span>
+        </div>
+      </div>
+
+      <div class="ai-widget-action-circle">
+        <span class="ai-widget-sparkle">✨</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Project Case-Study Modal Popup -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Injected via JavaScript dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Instant Project Inquiry / Contact Modal Popup -->
+  <div id="contact-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-card contact-modal-card">
+      <button class="modal-close-btn" id="contact-close-btn" aria-label="Close modal">✕</button>
+      <div class="contact-modal-content">
+        <div class="contact-header-badge">✦ GET IN TOUCH</div>
+        <h3 class="modal-title">Let's Discuss Your Project</h3>
+        <p class="modal-subtitle">Feel free to drop a message or reach out directly on WhatsApp or LinkedIn.</p>
+        
+        <!-- Direct Quick Connect Bar -->
+        <div class="modal-quick-connect-row">
+          <a href="https://wa.me/917990803065?text=Hi%20Hitesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="quick-connect-pill wa-pill">
+            <span>💬 WhatsApp</span>
+          </a>
+          <a href="https://www.linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" rel="noopener noreferrer" class="quick-connect-pill linkedin-quick-pill">
+            <span>🔗 LinkedIn</span>
+          </a>
+          <a href="tel:+917990803065" class="quick-connect-pill call-pill">
+            <span>📞 Call</span>
+          </a>
+        </div>
+
+        <div class="modal-divider"><span>OR SEND AN INQUIRY</span></div>
+
+        <form id="inquiry-form" class="inquiry-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" placeholder="e.g. Rahul Sharma" required>
+            </div>
+            <div class="form-group">
+              <label>Your Email *</label>
+              <input type="email" placeholder="name@company.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select class="custom-select">
+              <option>Web Design & Development</option>
+              <option>Digital Marketing & Meta Advertising</option>
+              <option>Local SEO & Google Business Profile</option>
+              <option>AI Creative Production & Scriptwriting</option>
+              <option>Brand Identity & Graphic Design</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Project Details / Message</label>
+            <textarea placeholder="Briefly describe what your business needs..." rows="3" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary-copper submit-btn">
+            <span>Send Project Inquiry</span>
+            <span class="btn-arrow-circle">↗</span>
+          </button>
+        </form>
+
+        <div id="form-success-msg" class="form-success-msg" style="display:none;">
+          <div class="success-checkmark">✓</div>
+          <h4>Inquiry Received Successfully!</h4>
+          <p>Thank you for reaching out. I will get back to you at <strong>contact.hiteshsadhu@gmail.com</strong> or via WhatsApp within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive AI Portfolio Assistant Modal Popup -->
+  <div id="ai-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-card ai-modal-card">
+      <button class="modal-close-btn" id="ai-close-btn" aria-label="Close modal">✕</button>
+      
+      <div class="ai-modal-header">
+        <div class="ai-orb-wrap">
+          <div class="ai-pulsing-orb"></div>
+          <div class="ai-header-titles">
+            <div class="ai-badge-row">
+              <span class="ai-status-dot"></span>
+              <span class="ai-badge-txt">AI PORTFOLIO AGENT</span>
+            </div>
+            <h3 class="ai-modal-title">Ask AI About Hitesh</h3>
+          </div>
+        </div>
+        <p class="ai-modal-desc">Instant intelligent answers about Hitesh's projects, tech stack, Meta Ads experience, and services.</p>
+      </div>
+
+      <!-- Quick Prompt Chips -->
+      <div class="ai-prompt-chips-wrap">
+        <span class="ai-chip" data-prompt="What are Hitesh's real client projects and results?">💼 Client Projects & ROI</span>
+        <span class="ai-chip" data-prompt="What AI tools and web technologies does Hitesh specialize in?">🤖 AI & Tech Stack</span>
+        <span class="ai-chip" data-prompt="Why should I hire Hitesh for Meta Ads & Web Dev?">📈 Why Hire Hitesh?</span>
+        <span class="ai-chip" data-prompt="How does Hitesh work and what is the typical project timeline?">⏱ Process & Timeline</span>
+        <span class="ai-chip" data-prompt="How can I contact Hitesh for a new project?">🚀 Start a Project</span>
+      </div>
+
+      <!-- Chat Conversation Log -->
+      <div class="ai-chat-log" id="ai-chat-log">
+        <div class="ai-message ai-bot-message">
+          <div class="ai-avatar">🤖</div>
+          <div class="ai-msg-bubble">
+            <p>Hi there! I am Hitesh's interactive <strong>AI Portfolio Assistant</strong>. Ask me anything about his <strong>web development, Meta advertising, AI workflows, client case studies, or Triosh startup</strong>!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Query Input Bar -->
+      <form id="ai-chat-form" class="ai-input-bar">
+        <input type="text" id="ai-query-input" placeholder="Type a question or pick a prompt chip above..." autocomplete="off" required>
+        <button type="submit" id="ai-send-btn" aria-label="Send query">
+          <span>Send</span>
+          <span class="ai-send-arrow">↗</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive Portfolio Architecture & Tech Specs Modal -->
+  <div id="specs-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-card specs-modal-card">
+      <button class="modal-close-btn" id="specs-close-btn" aria-label="Close modal">✕</button>
+      
+      <div class="specs-header">
+        <div class="specs-badge-tag">🛠️ HANDCRAFTED ENGINEERING</div>
+        <h3 class="specs-title">Portfolio Tech Architecture</h3>
+        <p class="specs-desc">This entire interactive portfolio was engineered from scratch by Hitesh Sadhu with zero bloated templates.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-num">01</div>
+          <h4>3D Video Scrubbing Canvas</h4>
+          <p>Rendered on an HTML5 2D GPU context using dynamic DPR scaling and nearest-frame interpolation. Decoded in real-time at 60 FPS.</p>
+          <span class="spec-tech-pill">300 JPEGs • Sub-Pixel Blit</span>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-num">02</div>
+          <h4>0% Templates • Pure Vanilla JS</h4>
+          <p>Hand-written ECMAScript with zero heavy frontend framework overhead. Loads the initial interactive visual in under 0.8 seconds.</p>
+          <span class="spec-tech-pill">Vanilla JS • Zero Bloat</span>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-num">03</div>
+          <h4>Inertial Physics & Gyroscope</h4>
+          <p>Lenis momentum scroll coupled with DeviceOrientation gyroscope physics to drive real-time 3D tilt and specular lighting on mobile devices.</p>
+          <span class="spec-tech-pill">Gyroscope Sensor • Lenis</span>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-num">04</div>
+          <h4>Interactive Hitesh AI Agent</h4>
+          <p>Custom client-side intelligent knowledge retrieval engine with real-time typewriter response streaming and dynamic prompt discovery.</p>
+          <span class="spec-tech-pill">Gemini Workflows • Custom Engine</span>
+        </div>
+      </div>
+
+      <div class="specs-footer-row">
+        <div class="specs-author-tag">
+          <span>👨‍💻 Engineered by <strong>Hitesh Sadhu</strong> in Ahmedabad, Gujarat, India 🇮🇳</span>
+        </div>
+        <button class="btn-primary-copper open-contact-modal-btn" type="button">
+          <span>Build Something With Me</span>
+          <span class="btn-arrow-circle">↗</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
