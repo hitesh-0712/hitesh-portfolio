@@ -492,6 +492,201 @@
       { y: 30, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: 'power3.out', stagger: 0.15, delay: 0.8 }
     );
+
+    // Initialize 3D scene after page load
+    initHero3D();
+    initVanillaTilt();
   });
 
+  // =========================================================
+  // 15. THREE.JS — 3D HERO SCENE
+  // =========================================================
+  function initHero3D() {
+    const container = document.getElementById('hero-3d');
+    if (!container || typeof THREE === 'undefined') return;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0);
+    container.appendChild(renderer.domElement);
+
+    // ---- Wireframe Torus Knot (main 3D object) ----
+    const torusGeo = new THREE.TorusKnotGeometry(2.8, 0.8, 120, 16);
+    const torusMat = new THREE.MeshBasicMaterial({
+      color: 0x00e5ff,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.07,
+    });
+    const torusMesh = new THREE.Mesh(torusGeo, torusMat);
+    torusMesh.position.set(3, 0, 0);
+    scene.add(torusMesh);
+
+    // ---- Inner Icosahedron ----
+    const icoGeo = new THREE.IcosahedronGeometry(1.6, 1);
+    const icoMat = new THREE.MeshBasicMaterial({
+      color: 0x00e5ff,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.04,
+    });
+    const icoMesh = new THREE.Mesh(icoGeo, icoMat);
+    icoMesh.position.set(3, 0, 0);
+    scene.add(icoMesh);
+
+    // ---- Floating Particles ----
+    const particleCount = 1500;
+    const positions = new Float32Array(particleCount * 3);
+    const velocities = [];
+    for (let i = 0; i < particleCount; i++) {
+      positions[i * 3]     = (Math.random() - 0.5) * 25;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 25;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 25;
+      velocities.push({
+        x: (Math.random() - 0.5) * 0.003,
+        y: (Math.random() - 0.5) * 0.003,
+        z: (Math.random() - 0.5) * 0.003,
+      });
+    }
+    const particlesGeo = new THREE.BufferGeometry();
+    particlesGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const particlesMat = new THREE.PointsMaterial({
+      color: 0x00e5ff,
+      size: 1.5,
+      transparent: true,
+      opacity: 0.3,
+      sizeAttenuation: true,
+    });
+    const particles = new THREE.Points(particlesGeo, particlesMat);
+    scene.add(particles);
+
+    // ---- Connecting Lines (nearest neighbor) ----
+    const linesMat = new THREE.LineBasicMaterial({
+      color: 0x00e5ff,
+      transparent: true,
+      opacity: 0.03,
+    });
+
+    camera.position.z = 8;
+
+    // ---- Mouse tracking ----
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', (e) => {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    // ---- Animation Loop ----
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Rotate main objects
+      torusMesh.rotation.x += 0.002;
+      torusMesh.rotation.y += 0.003;
+      icoMesh.rotation.x -= 0.003;
+      icoMesh.rotation.y -= 0.002;
+
+      // Mouse interaction — smooth follow
+      torusMesh.rotation.x += (mouseY * 0.5 - torusMesh.rotation.x) * 0.01;
+      torusMesh.rotation.y += (mouseX * 0.5 - torusMesh.rotation.y) * 0.01;
+      icoMesh.rotation.x += (-mouseY * 0.3 - icoMesh.rotation.x) * 0.008;
+      icoMesh.rotation.y += (-mouseX * 0.3 - icoMesh.rotation.y) * 0.008;
+
+      // Animate particles
+      const posArray = particlesGeo.attributes.position.array;
+      for (let i = 0; i < particleCount; i++) {
+        posArray[i * 3]     += velocities[i].x;
+        posArray[i * 3 + 1] += velocities[i].y;
+        posArray[i * 3 + 2] += velocities[i].z;
+
+        // Boundary wrap
+        if (Math.abs(posArray[i * 3]) > 12.5) velocities[i].x *= -1;
+        if (Math.abs(posArray[i * 3 + 1]) > 12.5) velocities[i].y *= -1;
+        if (Math.abs(posArray[i * 3 + 2]) > 12.5) velocities[i].z *= -1;
+      }
+      particlesGeo.attributes.position.needsUpdate = true;
+
+      // Slow particle cloud rotation
+      particles.rotation.y += 0.0003;
+      particles.rotation.x += 0.0001;
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // ---- Resize ----
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // ---- Parallax scroll: move 3D scene up as user scrolls ----
+    gsap.to(container, {
+      yPercent: -30,
+      opacity: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.5,
+      }
+    });
+  }
+
+  // =========================================================
+  // 16. VANILLA TILT — 3D CARD HOVER
+  // =========================================================
+  function initVanillaTilt() {
+    if (typeof VanillaTilt === 'undefined') return;
+
+    // Apply to bento cards
+    const tiltCards = document.querySelectorAll('.bento-card');
+    VanillaTilt.init(tiltCards, {
+      max: 5,
+      speed: 600,
+      glare: true,
+      'max-glare': 0.08,
+      scale: 1.01,
+      perspective: 1200,
+    });
+
+    // Apply to step cards with more tilt
+    const stepTiltCards = document.querySelectorAll('.step-card');
+    VanillaTilt.init(stepTiltCards, {
+      max: 8,
+      speed: 500,
+      glare: true,
+      'max-glare': 0.1,
+      scale: 1.02,
+      perspective: 1000,
+    });
+
+    // Apply to creative cards
+    const creativeTiltCards = document.querySelectorAll('.creative-card');
+    VanillaTilt.init(creativeTiltCards, {
+      max: 10,
+      speed: 400,
+      glare: true,
+      'max-glare': 0.12,
+      scale: 1.03,
+      perspective: 900,
+    });
+
+    // Apply to metric cards
+    const metricTiltCards = document.querySelectorAll('.metric-card');
+    VanillaTilt.init(metricTiltCards, {
+      max: 6,
+      speed: 500,
+      glare: true,
+      'max-glare': 0.06,
+      perspective: 1200,
+    });
+  }
+
 })();
+

@@ -37,6 +37,26 @@ html.lenis, html.lenis body {
   background-size: 180px;
 }
 
+/* ---- THREE.JS 3D CANVAS ---- */
+#hero-3d {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+#hero-3d canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ---- VANILLA TILT GLARE FIX ---- */
+.js-tilt-glare {
+  border-radius: inherit;
+}
+.js-tilt-glare-inner {
+  border-radius: inherit;
+}
+
 /* ---- CUSTOM CURSOR ---- */
 .cursor-dot {
   position: fixed;

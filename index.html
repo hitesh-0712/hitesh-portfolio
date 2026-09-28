@@ -87,7 +87,9 @@
 
     <!-- ==================== HERO ==================== -->
     <section id="hero" class="relative min-h-screen flex flex-col justify-center px-6 pt-32 pb-20">
-      <div class="max-w-7xl mx-auto w-full">
+      <!-- 3D Canvas Background -->
+      <div id="hero-3d" class="absolute inset-0 z-0 overflow-hidden pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto w-full relative z-10">
 
         <!-- Status line -->
         <div class="reveal-up mb-8">
@@ -733,6 +735,10 @@
   </footer>
 
   <!-- ==================== SCRIPTS ==================== -->
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- VanillaTilt for 3D card tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   <!-- Lenis Smooth Scroll -->
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <!-- GSAP + ScrollTrigger -->
