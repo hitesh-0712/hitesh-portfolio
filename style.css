@@ -63,7 +63,7 @@ html {
 
 body {
   background-color: var(--bg-main);
-  background-image: radial-gradient(rgba(15, 23, 42, 0.065) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(100, 116, 139, 0.22) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
   color: var(--text-primary);
   overflow-x: hidden;
@@ -110,7 +110,7 @@ body {
 
 .section-alt {
   background-color: #ffffff;
-  background-image: radial-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(100, 116, 139, 0.18) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
