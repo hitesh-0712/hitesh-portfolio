@@ -35,7 +35,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=studio-dots">
+  <link rel="stylesheet" href="style.css?v=calc2">
 </head>
 <body>
 
@@ -1321,6 +1321,165 @@
 
         </div>
 
+        <!-- INTERACTIVE META ADS & BUDGET ESTIMATOR (UNIQUE GROWTH TOOL) -->
+        <div class="ads-calculator-card" id="ads-calculator">
+          
+          <div class="calc-header">
+            <div>
+              <span class="calc-badge">
+                <i data-lucide="calculator" class="icon-xs"></i>
+                INTERACTIVE ESTIMATOR • EMPIRICAL MODEL
+              </span>
+              <h3 class="calc-title">Meta Ads Campaign & Budget Reach Estimator</h3>
+              <p class="calc-subtitle">
+                Project dynamic impressions, unique audience reach, and campaign blueprint based on Hitesh's verified benchmark (₹4,696.53 spend → 586K+ impressions).
+              </p>
+            </div>
+            <div class="calc-benchmark-tag">
+              <span class="benchmark-dot"></span>
+              <span>Benchmark CPM: ~₹8.00 / 1K Views</span>
+            </div>
+          </div>
+
+          <div class="calc-grid">
+            
+            <!-- Left: Interactive Controls -->
+            <div class="calc-controls">
+              
+              <!-- Budget Slider -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <span class="control-label">Planned Campaign Budget (INR)</span>
+                  <span class="budget-display" id="budget-display">₹10,000</span>
+                </div>
+                <input type="range" id="budget-slider" min="3000" max="50000" step="1000" value="10000" class="budget-range-input">
+                <div class="range-marks">
+                  <span>₹3,000</span>
+                  <span>₹15,000</span>
+                  <span>₹30,000</span>
+                  <span>₹50,000</span>
+                </div>
+              </div>
+
+              <!-- Quick Presets -->
+              <div class="control-group">
+                <span class="control-sublabel">Quick Budget Presets:</span>
+                <div class="preset-buttons">
+                  <button type="button" class="preset-btn" data-val="5000">₹5K (Pilot)</button>
+                  <button type="button" class="preset-btn active" data-val="10000">₹10K (Growth)</button>
+                  <button type="button" class="preset-btn" data-val="25000">₹25K (Scale)</button>
+                  <button type="button" class="preset-btn" data-val="50000">₹50K (Max Reach)</button>
+                </div>
+              </div>
+
+              <!-- Campaign Objective Tabs -->
+              <div class="control-group">
+                <span class="control-sublabel">Select Target Campaign Objective:</span>
+                <div class="objective-selector">
+                  <button type="button" class="obj-btn active" data-objective="awareness">
+                    <i data-lucide="eye" class="icon-sm"></i>
+                    <div>
+                      <div class="obj-btn-title">Video Awareness & Reach</div>
+                      <div class="obj-btn-sub">Maximum regional impressions & reel watch-time</div>
+                    </div>
+                  </button>
+                  <button type="button" class="obj-btn" data-objective="local">
+                    <i data-lucide="map-pin" class="icon-sm"></i>
+                    <div>
+                      <div class="obj-btn-title">Local Store Footfall & WhatsApp</div>
+                      <div class="obj-btn-sub">High-intent customer inquiries in regional radius</div>
+                    </div>
+                  </button>
+                  <button type="button" class="obj-btn" data-objective="b2b">
+                    <i data-lucide="briefcase" class="icon-sm"></i>
+                    <div>
+                      <div class="obj-btn-title">B2B Industrial Catalog Lead Ads</div>
+                      <div class="obj-btn-sub">Targeted contractor, architect & factory owner views</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Live Projections -->
+            <div class="calc-projections">
+              
+              <div class="proj-header">
+                <span>PROJECTED EMPIRICAL OUTCOMES</span>
+                <span class="proj-confidence text-emerald">
+                  <i data-lucide="shield-check" class="icon-xs"></i>
+                  Data Backed
+                </span>
+              </div>
+
+              <!-- 4 Big Metric Tiles -->
+              <div class="proj-metrics-grid">
+                
+                <div class="proj-tile">
+                  <div class="proj-tile-num text-cyan" id="proj-impressions">1.25M+</div>
+                  <div class="proj-tile-label">Projected Impressions</div>
+                  <div class="proj-tile-sub">Estimated ad views on Instagram & FB</div>
+                </div>
+
+                <div class="proj-tile">
+                  <div class="proj-tile-num text-emerald" id="proj-reach">845K+</div>
+                  <div class="proj-tile-label">Estimated Unique Reach</div>
+                  <div class="proj-tile-sub">Individual users reached in target radius</div>
+                </div>
+
+                <div class="proj-tile">
+                  <div class="proj-tile-num text-blue" id="proj-views">1.27M+</div>
+                  <div class="proj-tile-label">3s+ Video Plays</div>
+                  <div class="proj-tile-sub">High retention reel views</div>
+                </div>
+
+                <div class="proj-tile">
+                  <div class="proj-tile-num text-purple" id="proj-clicks">4,650+</div>
+                  <div class="proj-tile-label">Profile & Link Clicks</div>
+                  <div class="proj-tile-sub">Direct engagement actions</div>
+                </div>
+
+              </div>
+
+              <!-- Strategic Blueprint Box -->
+              <div class="proj-blueprint-box">
+                <div class="blueprint-title">
+                  <i data-lucide="sparkles" class="icon-sm text-amber"></i>
+                  <span>RECOMMENDED EXECUTION BLUEPRINT</span>
+                </div>
+                <div class="blueprint-details-grid">
+                  <div class="bp-item">
+                    <span class="bp-label">Flight Duration:</span>
+                    <strong class="bp-val" id="bp-duration">14 - 21 Days</strong>
+                  </div>
+                  <div class="bp-item">
+                    <span class="bp-label">Daily Spend Pace:</span>
+                    <strong class="bp-val" id="bp-pace">~₹500 / day</strong>
+                  </div>
+                  <div class="bp-item">
+                    <span class="bp-label">Creative Mix:</span>
+                    <strong class="bp-val" id="bp-creative">3 Reel Videos + 4 Carousels</strong>
+                  </div>
+                  <div class="bp-item">
+                    <span class="bp-label">Effective CPM:</span>
+                    <strong class="bp-val text-emerald" id="bp-cpm">~₹8.00 per 1K views</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Direct WhatsApp Consultation CTA -->
+              <a href="https://wa.me/917990803065?text=Hello%20Hitesh,%20I%20used%20your%20Meta%20Ads%20Estimator%20for%20₹10,000%20budget.%20Let's%20discuss%20campaign%20strategy." id="calc-whatsapp-btn" target="_blank" rel="noopener noreferrer" class="btn-calc-cta">
+                <i data-lucide="message-circle" class="icon-sm"></i>
+                <span>Discuss This Campaign Strategy with Hitesh on WhatsApp →</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
@@ -1666,7 +1825,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="app.js"></script>
+  <script src="app.js?v=calc2"></script>
   <script>
     lucide.createIcons();
   </script>

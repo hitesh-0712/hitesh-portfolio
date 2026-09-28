@@ -132,6 +132,124 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ----------------------------------------------------
+  // 4b. INTERACTIVE META ADS BUDGET ESTIMATOR
+  // ----------------------------------------------------
+  const budgetSlider = document.getElementById('budget-slider');
+  const budgetDisplay = document.getElementById('budget-display');
+  const presetBtns = document.querySelectorAll('.preset-btn');
+  const objBtns = document.querySelectorAll('.obj-btn');
+  
+  const projImpressions = document.getElementById('proj-impressions');
+  const projReach = document.getElementById('proj-reach');
+  const projViews = document.getElementById('proj-views');
+  const projClicks = document.getElementById('proj-clicks');
+  
+  const bpDuration = document.getElementById('bp-duration');
+  const bpPace = document.getElementById('bp-pace');
+  const bpCreative = document.getElementById('bp-creative');
+  const bpCpm = document.getElementById('bp-cpm');
+  const calcWhatsappBtn = document.getElementById('calc-whatsapp-btn');
+
+  let currentObjective = 'awareness';
+
+  function formatNumber(num) {
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(2) + 'M+';
+    } else if (num >= 1000) {
+      return Math.round(num / 1000) + 'K+';
+    }
+    return num.toLocaleString('en-IN');
+  }
+
+  function calculateProjections() {
+    if (!budgetSlider) return;
+    const budget = parseInt(budgetSlider.value, 10);
+    
+    // Update displayed budget
+    if (budgetDisplay) {
+      budgetDisplay.innerText = '₹' + budget.toLocaleString('en-IN');
+    }
+
+    let impMult = 125;
+    let reachMult = 84.6;
+    let viewMult = 127;
+    let clickMult = 0.465;
+    let cpmRate = '~₹8.00 per 1K views';
+    let duration = '14 - 21 Days';
+    let creative = '3 Reel Videos + 4 Carousels';
+
+    if (currentObjective === 'local') {
+      impMult = 95;
+      reachMult = 62;
+      viewMult = 90;
+      clickMult = 0.85;
+      cpmRate = '~₹10.50 per 1K views';
+      duration = '10 - 14 Days';
+      creative = '2 Store Tour Reels + WhatsApp Lead Ads';
+    } else if (currentObjective === 'b2b') {
+      impMult = 75;
+      reachMult = 48;
+      viewMult = 68;
+      clickMult = 0.65;
+      cpmRate = '~₹13.30 per 1K views';
+      duration = '21 - 30 Days';
+      creative = 'Architectural Glass Video + Catalog Ads';
+    }
+
+    const estImpressions = Math.round(budget * impMult);
+    const estReach = Math.round(budget * reachMult);
+    const estViews = Math.round(budget * viewMult);
+    const estClicks = Math.round(budget * clickMult);
+    const dailyPace = Math.round(budget / 14);
+
+    if (projImpressions) projImpressions.innerText = formatNumber(estImpressions);
+    if (projReach) projReach.innerText = formatNumber(estReach);
+    if (projViews) projViews.innerText = formatNumber(estViews);
+    if (projClicks) projClicks.innerText = estClicks.toLocaleString('en-IN') + '+';
+
+    if (bpDuration) bpDuration.innerText = duration;
+    if (bpPace) bpPace.innerText = '~₹' + dailyPace.toLocaleString('en-IN') + ' / day';
+    if (bpCreative) bpCreative.innerText = creative;
+    if (bpCpm) bpCpm.innerText = cpmRate;
+
+    // Update WhatsApp CTA prefilled text
+    if (calcWhatsappBtn) {
+      const msg = encodeURIComponent(`Hello Hitesh, I used your Meta Ads Estimator for ₹${budget.toLocaleString('en-IN')} budget (${currentObjective} objective). Let's discuss campaign execution.`);
+      calcWhatsappBtn.href = `https://wa.me/917990803065?text=${msg}`;
+    }
+  }
+
+  if (budgetSlider) {
+    budgetSlider.addEventListener('input', () => {
+      presetBtns.forEach(b => {
+        b.classList.toggle('active', parseInt(b.getAttribute('data-val'), 10) === parseInt(budgetSlider.value, 10));
+      });
+      calculateProjections();
+    });
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.getAttribute('data-val'), 10);
+        budgetSlider.value = val;
+        presetBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        calculateProjections();
+      });
+    });
+
+    objBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        objBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentObjective = btn.getAttribute('data-objective');
+        calculateProjections();
+      });
+    });
+
+    calculateProjections();
+  }
+
 });
 
 // ----------------------------------------------------
