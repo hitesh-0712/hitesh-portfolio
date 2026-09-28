@@ -1,83 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hitesh Sadhu — Social Media & Digital Marketing Portfolio</title>
-  <meta name="description" content="Portfolio of Hitesh Sadhu. Social Media & Digital Marketing with real client case studies, Meta Ads campaigns, and AI-accelerated workflows.">
+  <meta name="description" content="Official Portfolio of Hitesh Sadhu. Social Media & Digital Marketing Specialist with practical client experience in Meta Ads, Profile Optimization, Reel Scripting, and AI Workflows.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
-  <!-- Fonts -->
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark: '#050505',
-            surface: '#0c0c0c',
-            card: '#111111',
-            cardHover: '#1a1a1a',
-            accent: '#00e5ff',
-            accentDim: '#007a8a',
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Space Grotesk', 'system-ui', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-dark text-white antialiased overflow-x-hidden">
+  <!-- Ambient Background Lighting (Soft, Elegant, Zero Blocky Artifacts) -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
 
-  <!-- GRAIN OVERLAY -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- ==================== NAVIGATION ==================== -->
-  <header id="nav" class="fixed top-0 left-0 w-full z-50 py-5 px-6 transition-all duration-500">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent font-display font-bold text-sm group-hover:bg-accent/20 transition-all duration-300">HS</div>
-        <div class="hidden sm:block">
-          <div class="text-sm font-semibold text-white/90 group-hover:text-white transition-colors">Hitesh Sadhu</div>
-          <div class="text-[10px] text-white/30 flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            Available
-          </div>
+  <!-- FLOATING NAVIGATION BAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="#hero" class="nav-brand">
+        <div class="nav-avatar">
+          <img src="assets/hitesh-dp.png" alt="Hitesh Sadhu">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-name">HITESH SADHU</span>
+          <span class="nav-status">
+            <span class="status-dot"></span> Available for Work
+          </span>
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-1">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#work" class="nav-link">Work</a>
-        <a href="#creatives" class="nav-link">Creatives</a>
-        <a href="#ads" class="nav-link">Meta Ads</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <!-- Desktop Links -->
+      <div class="nav-links">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#workflow" class="nav-item">Workflow</a>
+        <a href="#case-studies" class="nav-item">Case Studies</a>
+        <a href="#creatives" class="nav-item">Creatives</a>
+        <a href="#meta-ads" class="nav-item">Meta Ads</a>
+        <a href="#scripting-ai" class="nav-item">Reels & AI</a>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a href="assets/Hitesh_Sadhu_Digital_Marketing_Portfolio.pdf" download class="hidden sm:inline-flex items-center gap-2 text-xs font-medium text-white/50 hover:text-white border border-white/10 hover:border-white/20 px-4 py-2 rounded-full transition-all duration-300">
-          <i data-lucide="download" class="w-3.5 h-3.5"></i> PDF
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="assets/Hitesh_Sadhu_Digital_Marketing_Portfolio.pdf" download="Hitesh_Sadhu_Digital_Marketing_Portfolio.pdf" class="btn-pdf">
+          <i data-lucide="download" class="icon-sm"></i>
+          <span>PDF Deck</span>
         </a>
-        <a href="#contact" class="magnetic inline-flex items-center gap-2 text-xs font-semibold text-dark bg-accent hover:bg-white px-5 py-2.5 rounded-full transition-all duration-300">
-          Get in Touch
+        <a href="#contact" class="btn-cta">
+          <span>Get in Touch</span>
+          <i data-lucide="arrow-up-right" class="icon-sm"></i>
         </a>
       </div>
     </nav>
@@ -85,387 +68,926 @@
 
   <main>
 
-    <!-- ==================== HERO ==================== -->
-    <section id="hero" class="relative min-h-screen flex flex-col justify-center px-6 pt-32 pb-20">
-      <!-- 3D Canvas Background -->
-      <div id="hero-3d" class="absolute inset-0 z-0 overflow-hidden pointer-events-none"></div>
-      <div class="max-w-7xl mx-auto w-full relative z-10">
-
-        <!-- Status line -->
-        <div class="reveal-up mb-8">
-          <div class="inline-flex items-center gap-3 text-xs text-white/40 font-medium tracking-wider uppercase">
-            <span class="w-8 h-px bg-accent"></span>
-            Social Media & Digital Marketing
-            <span class="text-accent">•</span>
-            Ahmedabad, Gujarat
+    <!-- ==================== 01. HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Left: Text & Pitch -->
+        <div class="hero-content">
+          
+          <div class="status-badge">
+            <span class="status-ping"></span>
+            <span class="status-text">Ahmedabad, Gujarat • Available for In-Person Work</span>
           </div>
-        </div>
 
-        <!-- Main Title -->
-        <h1 class="font-display font-bold tracking-tight leading-[0.9] mb-8">
-          <div class="overflow-hidden"><span class="reveal-text block text-[clamp(3rem,10vw,8rem)] text-white">HITESH</span></div>
-          <div class="overflow-hidden"><span class="reveal-text block text-[clamp(3rem,10vw,8rem)] text-transparent bg-clip-text bg-gradient-to-r from-accent via-cyan-300 to-blue-400">SADHU</span></div>
-        </h1>
+          <h1 class="hero-title">
+            HITESH <span class="gradient-text">SADHU</span>
+          </h1>
 
-        <!-- Subtitle -->
-        <div class="reveal-up max-w-xl mb-10">
-          <p class="text-lg md:text-xl text-white/40 leading-relaxed font-light">
-            Executing social media turnarounds, viral reel scripting, performance Meta Ads, and AI&#8209;accelerated marketing for regional brands.
+          <p class="hero-subtitle">
+            Social Media & Digital Marketing Specialist
           </p>
+
+          <p class="hero-description">
+            Executing strategic Instagram profile makeovers, viral reel scripting, performance Meta Ads, and AI-assisted workflows for growing regional businesses and consumer brands.
+          </p>
+
+          <!-- Core Focus Tags -->
+          <div class="tag-group">
+            <span class="tag-pill"><i data-lucide="sparkles" class="tag-icon"></i> Social Media Content</span>
+            <span class="tag-pill"><i data-lucide="video" class="tag-icon"></i> Reel Scripting & 3s Hooks</span>
+            <span class="tag-pill"><i data-lucide="target" class="tag-icon"></i> Meta Ads Management</span>
+            <span class="tag-pill"><i data-lucide="bot" class="tag-icon"></i> AI-Assisted Workflows</span>
+            <span class="tag-pill"><i data-lucide="search" class="tag-icon"></i> SEO & GEO Optimization</span>
+          </div>
+
+          <!-- Hero Buttons -->
+          <div class="hero-btn-row">
+            <a href="#case-studies" class="btn-primary">
+              <span>Explore Case Studies</span>
+              <i data-lucide="arrow-down-right" class="icon-sm"></i>
+            </a>
+            <a href="#meta-ads" class="btn-secondary">
+              <i data-lucide="bar-chart-3" class="icon-sm"></i>
+              <span>View Meta Ads Data</span>
+            </a>
+            <a href="assets/Hitesh_Sadhu_Digital_Marketing_Portfolio.pdf" download class="btn-outline">
+              <i data-lucide="file-text" class="icon-sm"></i>
+              <span>14-Page PDF Deck</span>
+            </a>
+          </div>
+
         </div>
 
-        <!-- Tags -->
-        <div class="reveal-up flex flex-wrap gap-2 mb-14">
-          <span class="tag">Social Media Content</span>
-          <span class="tag">Reel Scripting</span>
-          <span class="tag">Meta Ads</span>
-          <span class="tag">AI Workflows</span>
-          <span class="tag">SEO & GEO</span>
-        </div>
+        <!-- Right: Executive Profile Showcase Card -->
+        <div class="hero-visual">
+          <div class="executive-card">
+            
+            <div class="card-glass-glow"></div>
 
-        <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.04] rounded-2xl overflow-hidden">
-          <div class="stat-block" data-count="9" data-suffix=" Mo.">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Practical Experience</div>
-            <div class="stat-sub">Triosh Digital Solutions</div>
-          </div>
-          <div class="stat-block" data-count="586" data-suffix="K+">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Ad Impressions</div>
-            <div class="stat-sub">Single 14-day campaign</div>
-          </div>
-          <div class="stat-block" data-count="597" data-suffix="K+">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Video Plays</div>
-            <div class="stat-sub">Reel & video engagement</div>
-          </div>
-          <div class="stat-block" data-count="5" data-suffix="+">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Brands Transformed</div>
-            <div class="stat-sub">FMCG, Health, B2B, Fashion</div>
+            <!-- Profile Photo with verified badge -->
+            <div class="profile-photo-wrapper">
+              <img src="assets/hitesh-dp.png" alt="Hitesh Sadhu" class="profile-photo">
+              <div class="verified-badge" title="Verified Digital Marketer">
+                <i data-lucide="check" class="icon-xs"></i>
+              </div>
+            </div>
+
+            <!-- Candidate Title info -->
+            <div class="executive-info">
+              <h3 class="executive-name">Hitesh Sadhu</h3>
+              <p class="executive-role">Digital Marketing & Social Media</p>
+              <div class="experience-pill">
+                <i data-lucide="briefcase" class="icon-xs"></i>
+                <span>~9 Months • Triosh Digital Solutions</span>
+              </div>
+            </div>
+
+            <!-- Mini Live Badges floating on card -->
+            <div class="executive-kpis">
+              <div class="kpi-chip">
+                <div class="kpi-chip-num">586K+</div>
+                <div class="kpi-chip-label">Meta Ad Impressions</div>
+              </div>
+              <div class="kpi-chip">
+                <div class="kpi-chip-num">597K+</div>
+                <div class="kpi-chip-label">Video / Reel Plays</div>
+              </div>
+            </div>
+
+            <!-- Quick Action Links -->
+            <div class="executive-actions">
+              <a href="https://wa.me/917990803065?text=Hello%20Hitesh,%20I%20reviewed%20your%20portfolio" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-compact">
+                <i data-lucide="message-circle" class="icon-sm"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a href="mailto:contact.hiteshsadhu@gmail.com" class="btn-email-compact">
+                <i data-lucide="mail" class="icon-sm"></i>
+                <span>Email Me</span>
+              </a>
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
-        <span class="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
-        <div class="w-px h-8 bg-gradient-to-b from-white/20 to-transparent scroll-line"></div>
+      <!-- Live KPI Stats Strip (Bottom of Hero) -->
+      <div class="container stats-container">
+        <div class="stats-grid">
+          
+          <div class="stat-box">
+            <div class="stat-number counter" data-target="9">~9 Mo.</div>
+            <div class="stat-title">Practical Experience</div>
+            <div class="stat-desc">Independent work with Triosh Digital</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number counter" data-target="586">586K+</div>
+            <div class="stat-title text-cyan">Ad Impressions</div>
+            <div class="stat-desc">Single 14-day flight campaign</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number counter" data-target="597">597K+</div>
+            <div class="stat-title text-emerald">Video & Reel Plays</div>
+            <div class="stat-desc">High watch time & audience retention</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number counter" data-target="5">5+</div>
+            <div class="stat-title text-purple">Brands Transformed</div>
+            <div class="stat-desc">FMCG, Health, B2B, Food, Fashion</div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ==================== ABOUT ==================== -->
-    <section id="about" class="py-32 px-6">
-      <div class="max-w-7xl mx-auto">
 
-        <div class="reveal-up text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">About & Background</div>
-        <h2 class="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6">
-          <div class="overflow-hidden"><span class="reveal-text block">Technical Acumen Meets</span></div>
-          <div class="overflow-hidden"><span class="reveal-text block text-white/30">Creative Marketing</span></div>
-        </h2>
+    <!-- ==================== 02. ABOUT & BACKGROUND ==================== -->
+    <section id="about" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">ABOUT ME & BACKGROUND • 02 / 14</span>
+          <h2 class="section-title">Technical Acumen Paired with Practical Marketing</h2>
+          <p class="section-desc">Information Technology graduate combining analytical thinking with real-world social media execution, profile makeovers, and paid ads.</p>
+        </div>
 
-        <!-- Bento Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mt-16">
-
-          <!-- Profile Quote -->
-          <div class="bento-card md:col-span-7 p-8 flex flex-col justify-between">
-            <div>
-              <div class="text-xs font-semibold text-accent/70 uppercase tracking-wider mb-4">Professional Profile</div>
-              <blockquote class="text-white/60 text-base leading-relaxed border-l-2 border-accent/30 pl-5">
-                "I have completed my education in <span class="text-white/90 font-medium">Information Technology</span> with practical experience in social media marketing and digital content creation. Through independent client work, I have worked on business analysis, Instagram profile optimization, content planning, reel scripting, social media creatives and Meta Ads."
-              </blockquote>
+        <div class="bento-grid">
+          
+          <!-- Bento 1: Professional Profile Quote -->
+          <div class="bento-card col-span-7">
+            <div class="card-header">
+              <i data-lucide="user-check" class="card-icon text-cyan"></i>
+              <span class="card-label">PROFESSIONAL PROFILE</span>
             </div>
-            <div class="mt-8 p-4 rounded-xl bg-white/[0.03] border border-white/[0.04]">
-              <div class="text-xs font-semibold text-emerald-400/70 uppercase tracking-wider mb-1">Career Objective</div>
-              <p class="text-xs text-white/40 leading-relaxed">
-                "I am looking for an opportunity to build my career in digital marketing and social media, where I can apply my practical experience while learning from an experienced professional team."
+            
+            <blockquote class="profile-quote">
+              "I have completed my education in <strong>Information Technology</strong> with practical experience in social media marketing and digital content creation. Through independent client project work, I have worked on business analysis, Instagram profile optimization, content planning, reel scripting, social media creatives and Meta Ads. I also use AI tools to accelerate content ideation, scripting, research and creative development while adapting the output to each brand and audience."
+            </blockquote>
+
+            <div class="objective-box">
+              <div class="objective-header">
+                <i data-lucide="compass" class="icon-sm text-emerald"></i>
+                <span>CAREER OBJECTIVE</span>
+              </div>
+              <p class="objective-text">
+                "I am looking for an opportunity to build my career in digital marketing and social media, where I can apply my practical experience in content creation, Meta Ads and AI-assisted marketing while learning from an experienced professional team."
               </p>
             </div>
           </div>
 
-          <!-- Experience Card -->
-          <div class="bento-card md:col-span-5 p-8">
-            <div class="text-xs font-semibold text-blue-400/70 uppercase tracking-wider mb-4">Practical Experience</div>
-            <div class="text-5xl font-display font-bold text-white mb-1">~9 Mo.</div>
-            <p class="text-xs text-white/30 mb-3">Independent Client Project Work</p>
-            <div class="inline-block px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/15 text-blue-300/70 text-xs font-medium">
-              Associated with Triosh Digital Solutions
+          <!-- Bento 2: Practical Experience & Languages -->
+          <div class="bento-card col-span-5">
+            <div class="card-header">
+              <i data-lucide="briefcase" class="card-icon text-blue"></i>
+              <span class="card-label">PRACTICAL EXPERIENCE</span>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-white/[0.04]">
-              <div class="text-xs font-semibold text-white/30 uppercase tracking-wider mb-3">Languages</div>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-lg bg-white/[0.04] text-xs text-white/50 border border-white/[0.04]">Hindi</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/[0.04] text-xs text-white/50 border border-white/[0.04]">Gujarati (Native)</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/[0.04] text-xs text-white/50 border border-white/[0.04]">English</span>
+            <div class="experience-block">
+              <div class="experience-years">~9 Months</div>
+              <div class="experience-sub">Independent Client Project Work</div>
+              <div class="company-badge">Associated with Triosh Digital Solutions</div>
+            </div>
+
+            <div class="languages-block">
+              <div class="block-title">LANGUAGES</div>
+              <div class="lang-pills">
+                <span class="lang-pill">Hindi • Fluent</span>
+                <span class="lang-pill">Gujarati • Native</span>
+                <span class="lang-pill">English • Professional</span>
               </div>
+              <p class="lang-note">Professional spoken & written client communication</p>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-white/[0.04] flex justify-between text-xs">
-              <span class="text-white/25">Target Role</span>
-              <span class="text-accent/70 font-medium">Social Media Intern / Exec</span>
+            <div class="target-role-footer">
+              <span class="text-muted">Target Role:</span>
+              <span class="text-emerald font-semibold">Social Media Intern / Digital Marketing</span>
             </div>
           </div>
 
-          <!-- Education -->
-          <div class="bento-card md:col-span-6 p-8">
-            <div class="text-xs font-semibold text-purple-400/70 uppercase tracking-wider mb-5">Education</div>
-            <div class="space-y-4">
-              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                <div class="flex justify-between items-start gap-4">
-                  <div>
-                    <h4 class="font-semibold text-sm text-white/80">B.E. in Information Technology</h4>
-                    <p class="text-xs text-white/25 mt-0.5">Kalol Institute of Technology & Research Centre</p>
-                  </div>
-                  <span class="shrink-0 text-[10px] font-semibold px-2 py-1 rounded bg-emerald-500/10 text-emerald-400/70 border border-emerald-500/10">2023–2026</span>
+          <!-- Bento 3: Education History -->
+          <div class="bento-card col-span-6">
+            <div class="card-header">
+              <i data-lucide="graduation-cap" class="card-icon text-purple"></i>
+              <span class="card-label">EDUCATION HISTORY</span>
+            </div>
+
+            <div class="edu-list">
+              
+              <div class="edu-card">
+                <div class="edu-main">
+                  <h4 class="edu-degree">B.E. in Information Technology</h4>
+                  <p class="edu-college">Kalol Institute of Technology and Research Centre</p>
+                </div>
+                <span class="badge-success">2023 – 2026 • Completed</span>
+              </div>
+
+              <div class="edu-card">
+                <div class="edu-main">
+                  <h4 class="edu-degree">Diploma in Computer Engineering</h4>
+                  <p class="edu-college">Shree Vasudev and Kantilal Patel Institute</p>
+                </div>
+                <div class="edu-right">
+                  <span class="badge-cgpa">CGPA: 8.53 / 10</span>
+                  <span class="edu-year">2020 – 2023</span>
                 </div>
               </div>
-              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                <div class="flex justify-between items-start gap-4">
-                  <div>
-                    <h4 class="font-semibold text-sm text-white/80">Diploma in Computer Engineering</h4>
-                    <p class="text-xs text-white/25 mt-0.5">Shree Vasudev & Kantilal Patel Institute</p>
-                  </div>
-                  <span class="shrink-0 text-[10px] font-bold px-2 py-1 rounded bg-purple-500/10 text-purple-300/70 border border-purple-500/10">CGPA 8.53</span>
+
+              <div class="edu-card">
+                <div class="edu-main">
+                  <h4 class="edu-degree">Secondary School Certificate (10th)</h4>
+                  <p class="edu-college">GSEB Board</p>
                 </div>
+                <span class="badge-success">65% • Completed</span>
               </div>
-              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                <div class="flex justify-between items-start">
-                  <h4 class="font-semibold text-sm text-white/80">10th — GSEB Board</h4>
-                  <span class="text-xs text-white/30">65%</span>
-                </div>
-              </div>
+
             </div>
           </div>
 
-          <!-- Skills Grid -->
-          <div class="bento-card md:col-span-6 p-8">
-            <div class="text-xs font-semibold text-emerald-400/70 uppercase tracking-wider mb-5">Core Capabilities</div>
-            <div class="grid grid-cols-2 gap-3">
-              <div class="skill-tile"><i data-lucide="share-2" class="w-4 h-4 text-cyan-400/60"></i><div><div class="text-xs font-semibold text-white/70">Social Media Strategy</div><div class="text-[10px] text-white/25">Audits, feeds, highlights</div></div></div>
-              <div class="skill-tile"><i data-lucide="target" class="w-4 h-4 text-emerald-400/60"></i><div><div class="text-xs font-semibold text-white/70">Meta Ads Manager</div><div class="text-[10px] text-white/25">Awareness, reach, pacing</div></div></div>
-              <div class="skill-tile"><i data-lucide="video" class="w-4 h-4 text-blue-400/60"></i><div><div class="text-xs font-semibold text-white/70">Reel Scripting</div><div class="text-[10px] text-white/25">3s hooks, original scripts</div></div></div>
-              <div class="skill-tile"><i data-lucide="palette" class="w-4 h-4 text-purple-400/60"></i><div><div class="text-xs font-semibold text-white/70">Canva Design</div><div class="text-[10px] text-white/25">Brand identities, carousels</div></div></div>
-              <div class="skill-tile"><i data-lucide="bot" class="w-4 h-4 text-pink-400/60"></i><div><div class="text-xs font-semibold text-white/70">AI Acceleration</div><div class="text-[10px] text-white/25">ChatGPT, Claude, Gemini</div></div></div>
-              <div class="skill-tile"><i data-lucide="search" class="w-4 h-4 text-amber-400/60"></i><div><div class="text-xs font-semibold text-white/70">SEO & GEO</div><div class="text-[10px] text-white/25">Generative engine discovery</div></div></div>
+          <!-- Bento 4: Core Capabilities & Toolkit -->
+          <div class="bento-card col-span-6">
+            <div class="card-header">
+              <i data-lucide="cpu" class="card-icon text-emerald"></i>
+              <span class="card-label">CORE CAPABILITIES & SEARCH OPTIMIZATION</span>
+            </div>
+
+            <div class="skills-grid">
+              
+              <div class="skill-item">
+                <i data-lucide="share-2" class="skill-icon text-cyan"></i>
+                <div>
+                  <div class="skill-name">Social Media Strategy</div>
+                  <div class="skill-desc">Audits, highlights, feed grids</div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <i data-lucide="target" class="skill-icon text-emerald"></i>
+                <div>
+                  <div class="skill-name">Meta Ads Manager</div>
+                  <div class="skill-desc">Awareness, targeting, budget pacing</div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <i data-lucide="video" class="skill-icon text-blue"></i>
+                <div>
+                  <div class="skill-name">Reel Scripting & 3s Hooks</div>
+                  <div class="skill-desc">100% original dialogues & angles</div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <i data-lucide="palette" class="skill-icon text-purple"></i>
+                <div>
+                  <div class="skill-name">Canva Creative Design</div>
+                  <div class="skill-desc">Brand identities, carousels, ads</div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <i data-lucide="bot" class="skill-icon text-pink"></i>
+                <div>
+                  <div class="skill-name">AI Acceleration</div>
+                  <div class="skill-desc">ChatGPT, Claude AI & Google Gemini</div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <i data-lucide="search" class="skill-icon text-amber"></i>
+                <div>
+                  <div class="skill-name">SEO & GEO Optimization</div>
+                  <div class="skill-desc">Generative Engine Discovery</div>
+                </div>
+              </div>
+
             </div>
           </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- ==================== 7-STEP WORKFLOW ==================== -->
-    <section class="py-32 px-6 border-t border-white/[0.04]">
-      <div class="max-w-7xl mx-auto">
-        <div class="reveal-up text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">Execution Methodology</div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-16">
-          <div class="overflow-hidden"><span class="reveal-text block">7-Step Workflow</span></div>
-        </h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="step-card"><span class="step-num">01</span><h3 class="text-sm font-bold text-white/80 mb-2">Business Analysis</h3><p class="text-xs text-white/30 leading-relaxed">Understand client business, audience demographics, and marketing requirements.</p></div>
-          <div class="step-card"><span class="step-num">02</span><h3 class="text-sm font-bold text-white/80 mb-2">Profile Optimization</h3><p class="text-xs text-white/30 leading-relaxed">Review Instagram bio, logo, highlights for clear brand positioning.</p></div>
-          <div class="step-card"><span class="step-num">03</span><h3 class="text-sm font-bold text-white/80 mb-2">Content Planning</h3><p class="text-xs text-white/30 leading-relaxed">Plan content per business goals across educational & commercial formats.</p></div>
-          <div class="step-card"><span class="step-num">04</span><h3 class="text-sm font-bold text-white/80 mb-2">Script & Copy</h3><p class="text-xs text-white/30 leading-relaxed">Write reel scripts, hooks, captions & CTAs tailored to brand voice.</p></div>
-          <div class="step-card"><span class="step-num">05</span><h3 class="text-sm font-bold text-white/80 mb-2">Creative Design</h3><p class="text-xs text-white/30 leading-relaxed">Create social media posts, stories & promotional assets in Canva.</p></div>
-          <div class="step-card"><span class="step-num">06</span><h3 class="text-sm font-bold text-white/80 mb-2">Meta Ads Execution</h3><p class="text-xs text-white/30 leading-relaxed">Campaign setup, audience targeting, budget pacing & creative testing.</p></div>
-          <div class="step-card sm:col-span-2"><span class="step-num text-emerald-400/60">07</span><h3 class="text-sm font-bold text-white/80 mb-2">Performance Review & Iteration</h3><p class="text-xs text-white/30 leading-relaxed">Review reach, impressions, clicks, video views. Continuously improve future content and ad strategies based on empirical observations. This closed-loop process ensures every cycle builds on verified learnings.</p></div>
+    <!-- ==================== 03. 7-STEP WORKFLOW ==================== -->
+    <section id="workflow" class="section section-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">EXECUTION METHODOLOGY • 03 / 14</span>
+          <h2 class="section-title">My 7-Step Digital Marketing Workflow</h2>
+          <p class="section-desc">A structured, repeatable marketing process applied across client engagements to maintain strategic focus and execution quality.</p>
         </div>
+
+        <div class="workflow-grid">
+          
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-phase">Phase 1</span>
+            </div>
+            <h3 class="step-title">Business Analysis</h3>
+            <p class="step-text">Understand the client's business, products/services, target audience demographics, and marketing requirements before starting content creation.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-phase">Phase 2</span>
+            </div>
+            <h3 class="step-title">Profile Optimization</h3>
+            <p class="step-text">Review Instagram profile presentation, bio copy, logo/avatar presentation, and story highlights for clear brand positioning.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-phase">Phase 3</span>
+            </div>
+            <h3 class="step-title">Content Planning</h3>
+            <p class="step-text">Plan content according to business goals, audience, promotions, and strategic content pillars across educational and commercial formats.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">04</span>
+              <span class="step-phase">Phase 4</span>
+            </div>
+            <h3 class="step-title">Script & Copy Development</h3>
+            <p class="step-text">Write complete reel/video scripts, hooks, captions, and CTAs tailored to platform formats and the client's brand voice.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">05</span>
+              <span class="step-phase">Phase 5</span>
+            </div>
+            <h3 class="step-title">Creative Development</h3>
+            <p class="step-text">Create social media posts, promotional creatives, and story assets using Canva and AI-assisted tools with clean visual communication.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">06</span>
+              <span class="step-phase">Phase 6</span>
+            </div>
+            <h3 class="step-title">Meta Ads</h3>
+            <p class="step-text">Work with Meta Ads Manager for campaign setup, audience targeting, location targeting, budget planning, and creative selection.</p>
+          </div>
+
+          <div class="step-card step-card-featured">
+            <div class="step-top">
+              <span class="step-num text-emerald">07</span>
+              <span class="step-phase phase-emerald">Phase 7 • Closed Loop</span>
+            </div>
+            <h3 class="step-title text-emerald">Performance Review & Iteration</h3>
+            <p class="step-text">Review basic content and campaign performance, track engagement signals (reach, impressions, clicks, video views), and continuously improve future content and ad strategies based on empirical observations.</p>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- ==================== CASE STUDIES ==================== -->
-    <section id="work" class="py-32 px-6 border-t border-white/[0.04]">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
+
+    <!-- ==================== 04. CLIENT CASE STUDIES ==================== -->
+    <section id="case-studies" class="section">
+      <div class="container">
+        
+        <div class="section-header-flex">
           <div>
-            <div class="reveal-up text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">Client Case Studies</div>
-            <h2 class="font-display text-4xl md:text-6xl font-bold tracking-tight">
-              <div class="overflow-hidden"><span class="reveal-text block">5 Real Brand</span></div>
-              <div class="overflow-hidden"><span class="reveal-text block text-white/30">Transformations</span></div>
-            </h2>
+            <span class="section-tag">CLIENT CASE STUDIES • 04 - 08 / 14</span>
+            <h2 class="section-title">5 Real Client Transformations</h2>
+            <p class="section-desc">Practical profile audits, before & after visual turnarounds, and 100% original video scripting.</p>
           </div>
-          <div class="flex items-center gap-2 text-xs text-white/25 bg-white/[0.03] px-4 py-2 rounded-full border border-white/[0.04]">
-            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400/60"></i>
-            100% Authentic Work — No Fake Claims
+          <div class="authentic-badge">
+            <i data-lucide="shield-check" class="icon-sm text-emerald"></i>
+            <span>100% Authentic Work • No Fake Numbers</span>
           </div>
         </div>
 
-        <!-- Tabs -->
-        <div class="flex gap-2 overflow-x-auto pb-3 mt-10 no-scrollbar">
-          <button class="cs-tab active" data-target="cs-rinkuben">01. Rinkuben Khakhra</button>
-          <button class="cs-tab" data-target="cs-ekdant">02. Ekdant Dental</button>
-          <button class="cs-tab" data-target="cs-ramdev">03. Ramdev Glass</button>
-          <button class="cs-tab" data-target="cs-khodiyar">04. Khodiyar Dhaba</button>
-          <button class="cs-tab" data-target="cs-fitlady">05. Fitlady Wear</button>
+        <!-- Case Study Tabs -->
+        <div class="tab-scroller">
+          <button class="tab-btn active" data-target="cs-rinkuben">
+            <span class="tab-indicator bg-amber"></span>
+            <span>01. Rinkuben Khakhra</span>
+          </button>
+          <button class="tab-btn" data-target="cs-ekdant">
+            <span class="tab-indicator bg-teal"></span>
+            <span>02. Ekdant Dental</span>
+          </button>
+          <button class="tab-btn" data-target="cs-ramdev">
+            <span class="tab-indicator bg-blue"></span>
+            <span>03. Ramdev Glass</span>
+          </button>
+          <button class="tab-btn" data-target="cs-khodiyar">
+            <span class="tab-indicator bg-red"></span>
+            <span>04. Shree Khodiyar Dhaba</span>
+          </button>
+          <button class="tab-btn" data-target="cs-fitlady">
+            <span class="tab-indicator bg-purple"></span>
+            <span>05. Fitlady Western Wear</span>
+          </button>
         </div>
 
-        <!-- Panel: Rinkuben -->
-        <div id="cs-rinkuben" class="cs-panel active">
-          <div class="bento-card p-6 md:p-10 mt-6">
-            <div class="flex flex-wrap items-start justify-between gap-4 pb-8 border-b border-white/[0.04]">
+        <!-- CASE STUDY 01: Rinkuben Khakhrawala -->
+        <div id="cs-rinkuben" class="case-panel active">
+          <div class="case-card">
+            
+            <div class="case-header">
               <div>
-                <div class="text-[10px] font-bold text-amber-400/60 uppercase tracking-wider">Case Study 01 • FMCG & Food</div>
-                <h3 class="font-display text-2xl md:text-3xl font-bold text-white mt-1">Rinkuben Khakhrawala</h3>
-                <p class="text-xs text-white/25 mt-1"><span class="text-white/40 font-mono">@rinkubenkhakhrawala</span> • Export-Quality Khakhra • Kadi, Gujarat</p>
+                <span class="case-cat text-amber">CASE STUDY 01 • FMCG & FOOD PACKAGED GOODS</span>
+                <h3 class="case-name">Rinkuben Khakhrawala</h3>
+                <p class="case-meta">
+                  Handle: <span class="font-mono text-cyan">@rinkubenkhakhrawala</span> • Category: Export-Quality Khakhra • Location: Kadi, Gujarat
+                </p>
               </div>
-              <div class="flex flex-wrap gap-1.5"><span class="role-badge">Profile Optimization</span><span class="role-badge">Canva Graphics</span><span class="role-badge">Original Scripts</span></div>
+              <div class="case-roles">
+                <span class="role-chip">Profile Optimization</span>
+                <span class="role-chip">Graphics</span>
+                <span class="role-chip">Reel Scripts</span>
+                <span class="role-chip">Captions & Hashtags</span>
+              </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
-              <!-- Before/After -->
-              <div>
-                <div class="grid grid-cols-2 gap-3">
-                  <div class="text-center"><span class="text-[10px] font-bold text-red-400/50 uppercase">Before</span><div class="mt-2 rounded-xl overflow-hidden border border-white/[0.04] img-reveal"><img src="assets/before_rinkuben.png" alt="Before" class="w-full" loading="lazy"></div></div>
-                  <div class="text-center"><span class="text-[10px] font-bold text-emerald-400/50 uppercase">After</span><div class="mt-2 rounded-xl overflow-hidden border border-emerald-500/10 img-reveal"><img src="assets/after_rinkuben.png" alt="After" class="w-full" loading="lazy"></div></div>
+
+            <div class="case-grid">
+              
+              <!-- Left: Visual Comparison -->
+              <div class="visual-side">
+                <div class="visual-header">
+                  <span>VISUAL MAKEOVER COMPARISON</span>
+                  <span class="text-emerald">Live Audit</span>
                 </div>
-                <div class="mt-4 p-3 rounded-lg bg-white/[0.02] border border-white/[0.03] text-[11px] text-white/30">
-                  <span class="text-accent/60 font-semibold">Ownership:</span> Profile optimization, Canva graphics, reel scripts, captions, hashtags & publishing by Hitesh Sadhu via Triosh Digital.
-                </div>
-              </div>
-              <!-- Audit -->
-              <div class="space-y-4">
-                <div class="rounded-xl border border-white/[0.04] overflow-hidden text-xs">
-                  <div class="bg-white/[0.03] px-4 py-2.5 font-semibold text-white/40 uppercase tracking-wider text-[10px] flex justify-between"><span>Element</span><span>Before → After</span></div>
-                  <div class="divide-y divide-white/[0.03]">
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Avatar</span><span class="text-white/50"><span class="text-red-400/40 line-through">Raw photo</span> → <span class="text-emerald-400/60">Brand logo emblem</span></span></div>
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Bio</span><span class="text-white/50"><span class="text-red-400/40 line-through">Empty</span> → <span class="text-emerald-400/60">Value hook + WhatsApp CTA</span></span></div>
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Highlights</span><span class="text-white/50"><span class="text-red-400/40 line-through">None</span> → <span class="text-emerald-400/60">5 custom branded icons</span></span></div>
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Feed</span><span class="text-white/50"><span class="text-red-400/40 line-through">Random snaps</span> → <span class="text-emerald-400/60">Warm gold food palette</span></span></div>
+
+                <div class="comparison-row">
+                  <div class="comparison-col">
+                    <span class="comp-label text-red">BEFORE MAKEOVER</span>
+                    <div class="comp-img-box">
+                      <img src="assets/before_rinkuben.png" alt="Rinkuben Before Makeover" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="comparison-col">
+                    <span class="comp-label text-emerald">AFTER OPTIMIZATION</span>
+                    <div class="comp-img-box border-emerald">
+                      <img src="assets/after_rinkuben.png" alt="Rinkuben After Optimization" loading="lazy">
+                    </div>
                   </div>
                 </div>
-                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                  <div class="text-[10px] font-bold text-purple-400/60 uppercase tracking-wider mb-1.5">100% Original Scripting</div>
-                  <p class="text-xs text-white/35 leading-relaxed">Authored 4 Gujarati reel scripts. Created the "4 PM Chai Partner" snack crunch hooks driving WhatsApp conversions.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Panel: Ekdant -->
-        <div id="cs-ekdant" class="cs-panel">
-          <div class="bento-card p-6 md:p-10 mt-6">
-            <div class="pb-8 border-b border-white/[0.04]">
-              <div class="text-[10px] font-bold text-teal-400/60 uppercase tracking-wider">Case Study 02 • Healthcare</div>
-              <h3 class="font-display text-2xl md:text-3xl font-bold text-white mt-1">Ekdant Dental Clinic & Implant Centre</h3>
-              <p class="text-xs text-white/25 mt-1"><span class="text-white/40 font-mono">@ekdant_dental_clinic_kadi</span> • Dental Healthcare • Kadi, Gujarat</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
-              <div>
-                <div class="grid grid-cols-2 gap-3">
-                  <div class="text-center"><span class="text-[10px] font-bold text-red-400/50 uppercase">Before</span><div class="mt-2 rounded-xl overflow-hidden border border-white/[0.04] img-reveal"><img src="assets/before_ekdant.png" alt="Before" class="w-full" loading="lazy"></div></div>
-                  <div class="text-center"><span class="text-[10px] font-bold text-emerald-400/50 uppercase">After</span><div class="mt-2 rounded-xl overflow-hidden border border-teal-500/10 img-reveal"><img src="assets/after_ekdant.png" alt="After" class="w-full" loading="lazy"></div></div>
+                <div class="deliverable-note">
+                  <strong>Deliverable Ownership:</strong> Collaborated via Triosh Digital Solutions. 100% of profile optimization, Canva graphics, reel scripts, captions, hashtags & publishing delivered by <strong>Hitesh Sadhu</strong>. (Video shoot & video editing handled by client).
                 </div>
               </div>
-              <div class="space-y-4">
-                <div class="rounded-xl border border-white/[0.04] overflow-hidden text-xs">
-                  <div class="bg-white/[0.03] px-4 py-2.5 font-semibold text-white/40 uppercase tracking-wider text-[10px]">Clinical Audit</div>
-                  <div class="divide-y divide-white/[0.03]">
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Avatar</span><span class="text-white/50"><span class="text-red-400/40 line-through">Casual selfie</span> → <span class="text-teal-400/60">Official dental emblem</span></span></div>
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Bio</span><span class="text-white/50"><span class="text-red-400/40 line-through">Personal info</span> → <span class="text-teal-400/60">Services + Tap-to-Call</span></span></div>
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Highlights</span><span class="text-white/50"><span class="text-red-400/40 line-through">Zero</span> → <span class="text-teal-400/60">4 Trust categories</span></span></div>
+
+              <!-- Right: Detailed Audit & Strategic Notes -->
+              <div class="details-side">
+                
+                <!-- Audit Table -->
+                <div class="audit-table-wrapper">
+                  <div class="table-title">VISUAL & PROFILE MAKEOVER AUDIT</div>
+                  <table class="audit-table">
+                    <thead>
+                      <tr>
+                        <th>Element</th>
+                        <th>Before Makeover</th>
+                        <th>After Optimization</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Avatar</strong></td>
+                        <td class="text-strike">Raw product packet photo</td>
+                        <td class="text-emerald font-medium">Clean yellow brand logo emblem</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Bio Copy</strong></td>
+                        <td class="text-strike">Empty / no product detail</td>
+                        <td class="text-emerald font-medium">Value hook, 100% wheat, WhatsApp order CTA</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Highlights</strong></td>
+                        <td class="text-strike">Zero highlights</td>
+                        <td class="text-emerald font-medium">5 custom branded icons (Flavors, BTS, Export)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Feed Grid</strong></td>
+                        <td class="text-strike">Unstructured camera snaps</td>
+                        <td class="text-emerald font-medium">Warm appetizing yellow/gold food palette</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Strategic Interventions & Scripting Ownership -->
+                <div class="sub-cards-row">
+                  <div class="sub-card">
+                    <div class="sub-card-title text-amber">
+                      <i data-lucide="zap" class="icon-sm"></i>
+                      <span>STRATEGIC INTERVENTIONS</span>
+                    </div>
+                    <ul class="sub-card-list">
+                      <li>Overhauled bio with direct wa.me link for instant ordering.</li>
+                      <li>Standardized warm food palette & 5 custom covers.</li>
+                      <li>Balanced product carousels & short snack reels.</li>
+                    </ul>
+                  </div>
+
+                  <div class="sub-card">
+                    <div class="sub-card-title text-purple">
+                      <i data-lucide="clapperboard" class="icon-sm"></i>
+                      <span>100% ORIGINAL SCRIPTING</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Authored 4 complete Gujarati reel scripts. Conceived the relatable <em>"4 PM Chai Partner"</em> snack crunch hooks driving direct WhatsApp ordering.
+                    </p>
                   </div>
                 </div>
-                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                  <div class="text-[10px] font-bold text-teal-400/60 uppercase tracking-wider mb-1.5">Patient Education Hooks</div>
-                  <p class="text-xs text-white/35 leading-relaxed">4 doctor-facing scripts addressing brushing mistakes, tooth pain signals, and OPD booking calls-to-action.</p>
-                </div>
+
               </div>
+
             </div>
+
           </div>
         </div>
 
-        <!-- Panel: Ramdev -->
-        <div id="cs-ramdev" class="cs-panel">
-          <div class="bento-card p-6 md:p-10 mt-6">
-            <div class="pb-8 border-b border-white/[0.04]">
-              <div class="text-[10px] font-bold text-blue-400/60 uppercase tracking-wider">Case Study 03 • Manufacturing & B2B</div>
-              <h3 class="font-display text-2xl md:text-3xl font-bold text-white mt-1">Ramdev Glass & Aluminium Section</h3>
-              <p class="text-xs text-white/25 mt-1"><span class="text-white/40 font-mono">@ramdevglass_aluminumsection</span> • Architectural Glass • Kadi & Ahmedabad</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
+        <!-- CASE STUDY 02: Ekdant Dental Clinic -->
+        <div id="cs-ekdant" class="case-panel">
+          <div class="case-card">
+            <div class="case-header">
               <div>
-                <div class="grid grid-cols-2 gap-3">
-                  <div class="text-center"><span class="text-[10px] font-bold text-red-400/50 uppercase">Before</span><div class="mt-2 rounded-xl overflow-hidden border border-white/[0.04] img-reveal"><img src="assets/before_ramdev.png" alt="Before" class="w-full" loading="lazy"></div></div>
-                  <div class="text-center"><span class="text-[10px] font-bold text-blue-400/50 uppercase">After</span><div class="mt-2 rounded-xl overflow-hidden border border-blue-500/10 img-reveal"><img src="assets/after_ramdev.png" alt="After" class="w-full" loading="lazy"></div></div>
-                </div>
+                <span class="case-cat text-teal">CASE STUDY 02 • HEALTHCARE & CLINICAL SERVICES</span>
+                <h3 class="case-name">Ekdant Dental Clinic & Implant Centre</h3>
+                <p class="case-meta">
+                  Handle: <span class="font-mono text-cyan">@ekdant_dental_clinic_kadi</span> • Category: Dental & Implant Healthcare • Location: Kadi, Gujarat
+                </p>
               </div>
-              <div class="space-y-4">
-                <div class="rounded-xl border border-white/[0.04] overflow-hidden text-xs">
-                  <div class="bg-white/[0.03] px-4 py-2.5 font-semibold text-white/40 uppercase tracking-wider text-[10px]">B2B Industrial Audit</div>
-                  <div class="divide-y divide-white/[0.03]">
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Status</span><span class="text-white/50"><span class="text-red-400/40 line-through">Dormant (13 friends)</span> → <span class="text-blue-400/60">Active catalog (35+ posts)</span></span></div>
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Bio</span><span class="text-white/50"><span class="text-red-400/40 line-through">Empty</span> → <span class="text-blue-400/60">Glass | Aluminium | Linktree</span></span></div>
+              <div class="case-roles">
+                <span class="role-chip">Clinical Revamp</span>
+                <span class="role-chip">Educational Scripts</span>
+                <span class="role-chip">Trust Highlights</span>
+                <span class="role-chip">Ethics Focus</span>
+              </div>
+            </div>
+
+            <div class="case-grid">
+              <div class="visual-side">
+                <div class="visual-header">
+                  <span>CLINICAL PROFILE TRANSFORMATION</span>
+                  <span class="text-teal">Authority & Trust</span>
+                </div>
+                <div class="comparison-row">
+                  <div class="comparison-col">
+                    <span class="comp-label text-red">BEFORE MAKEOVER</span>
+                    <div class="comp-img-box">
+                      <img src="assets/before_ekdant.png" alt="Ekdant Before Makeover" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="comparison-col">
+                    <span class="comp-label text-teal">AFTER OPTIMIZATION</span>
+                    <div class="comp-img-box border-teal">
+                      <img src="assets/after_ekdant.png" alt="Ekdant After Optimization" loading="lazy">
+                    </div>
                   </div>
                 </div>
-                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                  <div class="text-[10px] font-bold text-blue-400/60 uppercase tracking-wider mb-1.5">B2B Meta Ads Campaign</div>
-                  <p class="text-xs text-white/35 leading-relaxed">Targeted ads promoting commercial warehouse space to logistics and factory operators across regional industrial hubs.</p>
+                <div class="deliverable-note">
+                  <strong>Healthcare Ethics Focus:</strong> Role Scope: Profile revamp, clinical graphics, educational reel scripts, patient-friendly captions & hashtag strategy by <strong>Hitesh Sadhu</strong>.
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Panel: Khodiyar -->
-        <div id="cs-khodiyar" class="cs-panel">
-          <div class="bento-card p-6 md:p-10 mt-6">
-            <div class="pb-8 border-b border-white/[0.04]">
-              <div class="text-[10px] font-bold text-red-400/60 uppercase tracking-wider">Case Study 04 • Hospitality</div>
-              <h3 class="font-display text-2xl md:text-3xl font-bold text-white mt-1">Shree Khodiyar Kathiyawadi Dhaba</h3>
-              <p class="text-xs text-white/25 mt-1"><span class="text-white/40 font-mono">@shreekhodiyarkathiyawadikadi</span> • Kathiyawadi Food & Banquet • Kadi, Gujarat</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
-              <div>
-                <div class="grid grid-cols-2 gap-3">
-                  <div class="text-center"><span class="text-[10px] font-bold text-red-400/50 uppercase">Before</span><div class="mt-2 rounded-xl overflow-hidden border border-white/[0.04] img-reveal"><img src="assets/before_khodiyar.png" alt="Before" class="w-full" loading="lazy"></div></div>
-                  <div class="text-center"><span class="text-[10px] font-bold text-emerald-400/50 uppercase">After</span><div class="mt-2 rounded-xl overflow-hidden border border-emerald-500/10 img-reveal"><img src="assets/after_khodiyar.png" alt="After" class="w-full" loading="lazy"></div></div>
+              <div class="details-side">
+                <div class="audit-table-wrapper">
+                  <div class="table-title">CLINICAL PROFILE & TRUST AUDIT</div>
+                  <table class="audit-table">
+                    <thead>
+                      <tr><th>Element</th><th>Before Makeover</th><th>After Optimization</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Avatar</strong></td>
+                        <td class="text-strike">Casual doctor selfie</td>
+                        <td class="text-teal font-medium">Official clinical dental emblem logo</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Bio Copy</strong></td>
+                        <td class="text-strike">Personal doctor info</td>
+                        <td class="text-teal font-medium">Implants, Braces, OPD Timings & Tap-to-Call</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Highlights</strong></td>
+                        <td class="text-strike">Zero highlights</td>
+                        <td class="text-teal font-medium">4 Patient trust categories (Reviews, OPD, BTS)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Tone</strong></td>
+                        <td class="text-strike">Informal / unclear care scope</td>
+                        <td class="text-teal font-medium">Authoritative, patient-friendly & educational</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              </div>
-              <div class="space-y-4">
-                <div class="rounded-xl border border-white/[0.04] overflow-hidden text-xs">
-                  <div class="bg-white/[0.03] px-4 py-2.5 font-semibold text-white/40 uppercase tracking-wider text-[10px]">Hospitality Audit</div>
-                  <div class="divide-y divide-white/[0.03]">
-                    <div class="p-3 flex justify-between"><span class="text-white/30">Bio</span><span class="text-white/50"><span class="text-red-400/40 line-through">Unstructured</span> → <span class="text-emerald-400/60">"Where Taste Meets Tradition"</span></span></div>
-                    <div class="p-3 flex justify-between"><span class="text-white/30">CTA</span><span class="text-white/50"><span class="text-red-400/40 line-through">No link</span> → <span class="text-emerald-400/60">Google Maps + Table booking</span></span></div>
+
+                <div class="sub-cards-row">
+                  <div class="sub-card">
+                    <div class="sub-card-title text-teal">
+                      <i data-lucide="shield" class="icon-sm"></i>
+                      <span>OVERCOMING PATIENT FEAR</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Designed educational video thumbnails and clinic sterilization highlight covers addressing dental anxiety and common treatment misconceptions.
+                    </p>
+                  </div>
+                  <div class="sub-card">
+                    <div class="sub-card-title text-purple">
+                      <i data-lucide="clapperboard" class="icon-sm"></i>
+                      <span>DOCTOR SCRIPTING</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Formulated 4 doctor-facing scripts addressing brushing mistakes, tooth pain signals, and comfortable on-camera delivery.
+                    </p>
                   </div>
                 </div>
-                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                  <div class="text-[10px] font-bold text-amber-400/60 uppercase tracking-wider mb-1.5">Sensory Reel Direction</div>
-                  <p class="text-xs text-white/35 leading-relaxed">5 high-engagement food preparation reels spotlighting desi-ghee specialties and structured banquet booking promotions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 03: Ramdev Glass & Aluminium -->
+        <div id="cs-ramdev" class="case-panel">
+          <div class="case-card">
+            <div class="case-header">
+              <div>
+                <span class="case-cat text-blue">CASE STUDY 03 • COMMERCIAL FABRICATION & ARCHITECTURE</span>
+                <h3 class="case-name">Ramdev Glass & Aluminium Section</h3>
+                <p class="case-meta">
+                  Handle: <span class="font-mono text-cyan">@ramdevglass_aluminumsection</span> • Category: Architectural Glass & Sliding Systems • Location: Kadi & Ahmedabad
+                </p>
+              </div>
+              <div class="case-roles">
+                <span class="role-chip">Digital Showroom</span>
+                <span class="role-chip">35+ Project Posts</span>
+                <span class="role-chip">B2B Walkthroughs</span>
+                <span class="role-chip">Meta Ads</span>
+              </div>
+            </div>
+
+            <div class="case-grid">
+              <div class="visual-side">
+                <div class="visual-header">
+                  <span>INDUSTRIAL B2B PROFILE AUDIT</span>
+                  <span class="text-blue">Commercial Proof</span>
+                </div>
+                <div class="comparison-row">
+                  <div class="comparison-col">
+                    <span class="comp-label text-red">BEFORE MAKEOVER</span>
+                    <div class="comp-img-box">
+                      <img src="assets/before_ramdev.png" alt="Ramdev Before Makeover" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="comparison-col">
+                    <span class="comp-label text-blue">AFTER OPTIMIZATION</span>
+                    <div class="comp-img-box border-blue">
+                      <img src="assets/after_ramdev.png" alt="Ramdev After Optimization" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+                <div class="deliverable-note">
+                  <strong>B2B & Contractor Focus:</strong> Role Scope: Profile setup, Linktree catalog, project reel scripts, B2B captions, hashtags & Meta Ads targeting by <strong>Hitesh Sadhu</strong>.
+                </div>
+              </div>
+
+              <div class="details-side">
+                <div class="audit-table-wrapper">
+                  <div class="table-title">INDUSTRIAL B2B MAKEOVER AUDIT</div>
+                  <table class="audit-table">
+                    <thead>
+                      <tr><th>Element</th><th>Before Makeover</th><th>After Optimization</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Avatar</strong></td>
+                        <td class="text-strike">Generic placeholder graphic</td>
+                        <td class="text-blue font-medium">Modern industrial RG monogram identity</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Bio Copy</strong></td>
+                        <td class="text-strike">Empty / inactive profile</td>
+                        <td class="text-blue font-medium">Scope: Glass | Aluminium | Linktree catalog</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Profile Status</strong></td>
+                        <td class="text-strike">Dormant (13 friends)</td>
+                        <td class="text-blue font-medium">Active commercial catalog (35+ verified posts)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Highlights</strong></td>
+                        <td class="text-strike">No project showcases</td>
+                        <td class="text-blue font-medium">Sliding, Facades, Railings, Blueprint inquiries</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sub-cards-row">
+                  <div class="sub-card">
+                    <div class="sub-card-title text-blue">
+                      <i data-lucide="building-2" class="icon-sm"></i>
+                      <span>DIGITAL SHOWROOM</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Equipped local architects and builders with an online catalog to verify finishes, soundproof sliding specs, and glass thickness.
+                    </p>
+                  </div>
+                  <div class="sub-card">
+                    <div class="sub-card-title text-purple">
+                      <i data-lucide="target" class="icon-sm"></i>
+                      <span>B2B META ADS CAMPAIGN</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Set up targeted ads to promote available commercial warehouse leasing to logistics and factory operators across regional industrial hubs.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Panel: Fitlady -->
-        <div id="cs-fitlady" class="cs-panel">
-          <div class="bento-card p-6 md:p-10 mt-6">
-            <div class="pb-8 border-b border-white/[0.04]">
-              <div class="text-[10px] font-bold text-purple-400/60 uppercase tracking-wider">Case Study 05 • Women's Fashion</div>
-              <h3 class="font-display text-2xl md:text-3xl font-bold text-white mt-1">Fitlady Western Wear</h3>
-              <p class="text-xs text-white/25 mt-1"><span class="text-white/40 font-mono">@fitladywesternwear</span> • Western Wear & Retail • Kadi, Gujarat</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
-              <div class="flex justify-center">
-                <div class="max-w-[260px] rounded-xl overflow-hidden border border-purple-500/10 img-reveal"><img src="assets/fitlady_showcase.png" alt="Fitlady Showcase" class="w-full" loading="lazy"></div>
+        <!-- CASE STUDY 04: Shree Khodiyar Kathiyawadi Dhaba -->
+        <div id="cs-khodiyar" class="case-panel">
+          <div class="case-card">
+            <div class="case-header">
+              <div>
+                <span class="case-cat text-red">CASE STUDY 04 • HOSPITALITY & REGIONAL CUISINE</span>
+                <h3 class="case-name">Shree Khodiyar Kathiyawadi Dhaba</h3>
+                <p class="case-meta">
+                  Handle: <span class="font-mono text-cyan">@shreekhodiyarkathiyawadikadi</span> • Category: Kathiyawadi Food & AC Banquet Hall • Location: Kadi, Gujarat
+                </p>
               </div>
-              <div class="space-y-4">
-                <div class="grid grid-cols-2 gap-3">
-                  <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03] text-center"><div class="text-2xl font-display font-bold text-white">43</div><div class="text-[10px] text-white/25 mt-0.5">Posts Published</div></div>
-                  <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03] text-center"><div class="text-2xl font-display font-bold text-emerald-400/80">398</div><div class="text-[10px] text-white/25 mt-0.5">Organic Followers</div></div>
+              <div class="case-roles">
+                <span class="role-chip">Highlight Covers</span>
+                <span class="role-chip">Sensory Food Scripts</span>
+                <span class="role-chip">Banquet Awareness</span>
+                <span class="role-chip">Google Maps Routing</span>
+              </div>
+            </div>
+
+            <div class="case-grid">
+              <div class="visual-side">
+                <div class="visual-header">
+                  <span>HOSPITALITY VISUAL MAKEOVER</span>
+                  <span class="text-emerald">Appetite Appeal</span>
                 </div>
-                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                  <div class="text-[10px] font-bold text-purple-400/60 uppercase tracking-wider mb-1">Brand Identity</div>
-                  <p class="text-xs text-white/40 italic">"Fashion | Confidence | Style — Be Bold, Stylish, You"</p>
+                <div class="comparison-row">
+                  <div class="comparison-col">
+                    <span class="comp-label text-red">BEFORE MAKEOVER</span>
+                    <div class="comp-img-box">
+                      <img src="assets/before_khodiyar.png" alt="Khodiyar Before Makeover" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="comparison-col">
+                    <span class="comp-label text-emerald">AFTER OPTIMIZATION</span>
+                    <div class="comp-img-box border-emerald">
+                      <img src="assets/after_khodiyar.png" alt="Khodiyar After Optimization" loading="lazy">
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.03]">
-                  <div class="text-[10px] font-bold text-emerald-400/60 uppercase tracking-wider mb-1">WhatsApp Order Desk</div>
-                  <p class="text-xs text-white/35 leading-relaxed">Integrated Linktree order routing driving verified physical footfall in Kadi market.</p>
+                <div class="deliverable-note">
+                  <strong>Highway & Banquet Positioning:</strong> Role Scope: Highlight graphics, bio overhaul, appetizing reel scripts, local food captions, hashtags & location setup by <strong>Hitesh Sadhu</strong>.
+                </div>
+              </div>
+
+              <div class="details-side">
+                <div class="audit-table-wrapper">
+                  <div class="table-title">HOSPITALITY MAKEOVER AUDIT</div>
+                  <table class="audit-table">
+                    <thead>
+                      <tr><th>Element</th><th>Before Makeover</th><th>After Optimization</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Avatar</strong></td>
+                        <td class="text-strike">Store board photo</td>
+                        <td class="text-emerald font-medium">Clean high-contrast emblem</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Bio Copy</strong></td>
+                        <td class="text-strike">Unstructured petrol pump text</td>
+                        <td class="text-emerald font-medium">"Where Taste Meets Tradition", Pure Veg, Banquet 150+</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Highlights</strong></td>
+                        <td class="text-strike">Inconsistent random covers</td>
+                        <td class="text-emerald font-medium">Red/Green branded palette (Food, Banquet, Family)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Conversion</strong></td>
+                        <td class="text-strike">No direct link</td>
+                        <td class="text-emerald font-medium">Linktree for Google Maps directions & table booking</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sub-cards-row">
+                  <div class="sub-card">
+                    <div class="sub-card-title text-red">
+                      <i data-lucide="map-pin" class="icon-sm"></i>
+                      <span>HIGHWAY NAVIGATION</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Integrated verified Google Maps links directly in the bio, allowing highway travelers and tourists to navigate with 1 click.
+                    </p>
+                  </div>
+                  <div class="sub-card">
+                    <div class="sub-card-title text-amber">
+                      <i data-lucide="utensils" class="icon-sm"></i>
+                      <span>SENSORY FOOD SCRIPTS</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Scripted 5 high-engagement food preparation reels spotlighting desi-ghee specialties and banquet hall promotions for events.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 05: Fitlady Western Wear -->
+        <div id="cs-fitlady" class="case-panel">
+          <div class="case-card">
+            <div class="case-header">
+              <div>
+                <span class="case-cat text-purple">CASE STUDY 05 • WOMEN'S FASHION & RETAIL APPAREL</span>
+                <h3 class="case-name">Fitlady Western Wear</h3>
+                <p class="case-meta">
+                  Handle: <span class="font-mono text-cyan">@fitladywesternwear</span> • Category: Trendy Western Wear & Women's Retail • Location: Kadi, Gujarat
+                </p>
+              </div>
+              <div class="case-roles">
+                <span class="role-chip">Retail Launch</span>
+                <span class="role-chip">43 Posts</span>
+                <span class="role-chip">Lookbook Scripting</span>
+                <span class="role-chip">Meta Ads (586K+ Views)</span>
+              </div>
+            </div>
+
+            <div class="case-grid">
+              <div class="visual-side">
+                <div class="visual-header">
+                  <span>LIVE INSTAGRAM SHOWCASE</span>
+                  <span class="text-purple">Launch Growth</span>
+                </div>
+                <div class="single-showcase-box">
+                  <img src="assets/fitlady_showcase.png" alt="Fitlady Live Instagram Showcase" class="showcase-img" loading="lazy">
+                </div>
+                <div class="deliverable-note">
+                  <strong>Local Retail Synergy:</strong> Bio & Linktree setup, 43 posts planning, fashion reel scripts, outfit captions, hashtags & daily posting by <strong>Hitesh Sadhu</strong>.
+                </div>
+              </div>
+
+              <div class="details-side">
+                <div class="fitlady-metrics-grid">
+                  <div class="fitlady-metric-box">
+                    <div class="metric-num text-white">43</div>
+                    <div class="metric-label">Posts Published</div>
+                    <div class="metric-sub">Curated fashion posts & model reels</div>
+                  </div>
+                  <div class="fitlady-metric-box">
+                    <div class="metric-num text-emerald">398</div>
+                    <div class="metric-label">Organic Followers</div>
+                    <div class="metric-sub">Local fashion shoppers & students</div>
+                  </div>
+                </div>
+
+                <div class="brand-identity-box">
+                  <span class="text-purple font-bold">Brand Identity:</span>
+                  <p class="italic text-white">"Fashion | Confidence | Style • Be Bold, Stylish, You"</p>
+                </div>
+
+                <div class="sub-cards-row">
+                  <div class="sub-card">
+                    <div class="sub-card-title text-purple">
+                      <i data-lucide="sparkles" class="icon-sm"></i>
+                      <span>LOOKBOOK SCRIPTING</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Formulated outfit pairing concepts ("3 Ways to Style a Jumpsuit") and wearable confidence storylines for model shoots.
+                    </p>
+                  </div>
+                  <div class="sub-card">
+                    <div class="sub-card-title text-emerald">
+                      <i data-lucide="shopping-bag" class="icon-sm"></i>
+                      <span>WHATSAPP ORDERS</span>
+                    </div>
+                    <p class="sub-card-text">
+                      Implemented Linktree directory routing viewers directly to WhatsApp order desk, driving regional inquiries and verified store footfall.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -475,240 +997,627 @@
       </div>
     </section>
 
-    <!-- ==================== CREATIVES GALLERY ==================== -->
-    <section id="creatives" class="py-32 px-6 border-t border-white/[0.04]">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+
+    <!-- ==================== 05. SELECTED SOCIAL MEDIA CREATIVE WORK ==================== -->
+    <section id="creatives" class="section section-alt">
+      <div class="container">
+        
+        <div class="section-header-flex">
           <div>
-            <div class="reveal-up text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">Creative Portfolio</div>
-            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">
-              <div class="overflow-hidden"><span class="reveal-text block">Selected Work</span></div>
-            </h2>
+            <span class="section-tag">CREATIVE PORTFOLIO • 09 - 10 / 14</span>
+            <h2 class="section-title">Selected Social Media Creative Work</h2>
+            <p class="section-desc">Real social media graphics, product promotions, and healthcare creatives designed for client brands.</p>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="fmcg">Food</button>
+
+          <!-- Filter Buttons -->
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All Creatives</button>
+            <button class="filter-btn" data-filter="fmcg">Food & FMCG</button>
             <button class="filter-btn" data-filter="health">Healthcare</button>
-            <button class="filter-btn" data-filter="b2b">B2B</button>
-            <button class="filter-btn" data-filter="fashion">Fashion</button>
+            <button class="filter-btn" data-filter="b2b">Manufacturing / B2B</button>
+            <button class="filter-btn" data-filter="fashion">Fashion & Retail</button>
           </div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="gallery">
-          <div class="creative-card" data-cat="b2b" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/ramdev_creative_1.jpg" alt="Ramdev Glass" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-blue-400/50">B2B</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Ramdev Glass — Engineered To Impress</div></div></div>
-
-          <div class="creative-card" data-cat="b2b" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/ramdev_creative_2.jpg" alt="Ramdev Transformation" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-blue-400/50">B2B</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Ramdev — Before & After</div></div></div>
-
-          <div class="creative-card" data-cat="fmcg" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/rinkuben_creative_1.jpg" alt="Rinkuben Dates" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-amber-400/50">FMCG</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Rinkuben — Veda Dates Pickle</div></div></div>
-
-          <div class="creative-card" data-cat="fmcg" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/rinkuben_creative_2.jpg" alt="Rinkuben Toast" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-amber-400/50">FMCG</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Rinkuben — Butter Toast</div></div></div>
-
-          <div class="creative-card" data-cat="health" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/ekdant_creative_1.jpg" alt="Ekdant Superhero" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-teal-400/50">Healthcare</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Ekdant — Superhero Awareness</div></div></div>
-
-          <div class="creative-card" data-cat="health" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/ekdant_creative_2.jpg" alt="Ekdant Tools" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-teal-400/50">Healthcare</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Ekdant — Teeth ≠ Tools</div></div></div>
-
-          <div class="creative-card" data-cat="fashion" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/fitlady_creative_1.jpg" alt="Fitlady Confidence" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-purple-400/50">Fashion</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Fitlady — Confidence</div></div></div>
-
-          <div class="creative-card" data-cat="fashion" onclick="openLightbox(this)"><div class="img-wrap"><img src="assets/fitlady_creative_2.jpg" alt="Fitlady Defines" loading="lazy"><div class="img-overlay"><i data-lucide="expand" class="w-5 h-5"></i></div></div><div class="p-3"><span class="text-[9px] uppercase font-bold text-purple-400/50">Fashion</span><div class="text-xs font-semibold text-white/60 mt-0.5 truncate">Fitlady — Fashion Defines You</div></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== META ADS ==================== -->
-    <section id="ads" class="py-32 px-6 border-t border-white/[0.04]">
-      <div class="max-w-7xl mx-auto">
-        <div class="reveal-up text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">Meta Ads Manager</div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-16">
-          <div class="overflow-hidden"><span class="reveal-text block">Real Campaign Data</span></div>
-        </h2>
-
-        <div class="bento-card p-6 md:p-10">
-          <div class="flex flex-wrap items-start justify-between gap-4 pb-8 border-b border-white/[0.04]">
-            <div>
-              <div class="text-[10px] font-bold text-cyan-400/60 uppercase tracking-wider">Campaign 01 • Video Awareness</div>
-              <h3 class="font-display text-2xl font-bold text-white mt-1">Fitlady Western Wear</h3>
-              <p class="text-xs text-white/25 mt-1">Objective: Awareness • Period: 8–22 June 2026 • 14-Day Flight</p>
-            </div>
-            <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/10 text-[10px] font-semibold text-emerald-400/70">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ACTUAL DATA
-            </div>
-          </div>
-
-          <!-- 5 Metrics -->
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
-            <div class="metric-card">
-              <div class="text-2xl md:text-3xl font-display font-bold text-cyan-400">₹4,696</div>
-              <div class="text-[10px] font-semibold text-white/30 uppercase tracking-wider mt-1">Actual Spend</div>
-              <div class="text-[9px] text-white/20 mt-0.5">Budget: ₹5,000</div>
-              <div class="w-full h-1 bg-white/[0.04] rounded-full mt-3 overflow-hidden"><div class="h-full bg-cyan-400/40 rounded-full" style="width:94%"></div></div>
-            </div>
-            <div class="metric-card">
-              <div class="text-2xl md:text-3xl font-display font-bold text-emerald-400">397K+</div>
-              <div class="text-[10px] font-semibold text-white/30 uppercase tracking-wider mt-1">Total Reach</div>
-              <div class="text-[9px] text-white/20 mt-0.5">397,680 People</div>
-              <div class="w-full h-1 bg-white/[0.04] rounded-full mt-3 overflow-hidden"><div class="h-full bg-emerald-400/40 rounded-full" style="width:100%"></div></div>
-            </div>
-            <div class="metric-card">
-              <div class="text-2xl md:text-3xl font-display font-bold text-blue-400">586K+</div>
-              <div class="text-[10px] font-semibold text-white/30 uppercase tracking-wider mt-1">Impressions</div>
-              <div class="text-[9px] text-white/20 mt-0.5">586,929 Views</div>
-              <div class="w-full h-1 bg-white/[0.04] rounded-full mt-3 overflow-hidden"><div class="h-full bg-blue-400/40 rounded-full" style="width:100%"></div></div>
-            </div>
-            <div class="metric-card">
-              <div class="text-2xl md:text-3xl font-display font-bold text-purple-400">2,188</div>
-              <div class="text-[10px] font-semibold text-white/30 uppercase tracking-wider mt-1">Profile Clicks</div>
-              <div class="text-[9px] text-white/20 mt-0.5">High intent actions</div>
-              <div class="w-full h-1 bg-white/[0.04] rounded-full mt-3 overflow-hidden"><div class="h-full bg-purple-400/40 rounded-full" style="width:85%"></div></div>
-            </div>
-            <div class="metric-card">
-              <div class="text-2xl md:text-3xl font-display font-bold text-pink-400">597K+</div>
-              <div class="text-[10px] font-semibold text-white/30 uppercase tracking-wider mt-1">Video Plays</div>
-              <div class="text-[9px] text-white/20 mt-0.5">597,471 Plays</div>
-              <div class="w-full h-1 bg-white/[0.04] rounded-full mt-3 overflow-hidden"><div class="h-full bg-pink-400/40 rounded-full" style="width:100%"></div></div>
-            </div>
-          </div>
-
-          <!-- Role & Learnings -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 pt-8 border-t border-white/[0.04]">
-            <div>
-              <h4 class="text-sm font-semibold text-white/70 flex items-center gap-2 mb-4"><i data-lucide="sliders" class="w-4 h-4 text-cyan-400/50"></i> My Role</h4>
-              <ul class="space-y-2 text-xs text-white/35 leading-relaxed">
-                <li>• <strong class="text-white/50">Targeting:</strong> Women demographic within Kadi regional radius</li>
-                <li>• <strong class="text-white/50">Creative:</strong> High-tempo western wear lookbook video reels</li>
-                <li>• <strong class="text-white/50">Budget:</strong> Controlled daily spend across 14-day flight</li>
-                <li>• <strong class="text-white/50">Scope:</strong> Campaign creation, objective selection, monitoring</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="text-sm font-semibold text-white/70 flex items-center gap-2 mb-4"><i data-lucide="lightbulb" class="w-4 h-4 text-emerald-400/50"></i> What I Learned</h4>
-              <ul class="space-y-2 text-xs text-white/35 leading-relaxed">
-                <li>• <strong class="text-white/50">Awareness:</strong> Attention on unique reach and frequency</li>
-                <li>• <strong class="text-white/50">Video:</strong> 597K+ plays gave clear retention feedback</li>
-                <li>• <strong class="text-white/50">Local:</strong> Geo-targeting ensured regional store relevance</li>
-                <li>• <strong class="text-white/50">Delivery:</strong> Monitored health against awareness goal</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SCRIPTING & AI ==================== -->
-    <section class="py-32 px-6 border-t border-white/[0.04]">
-      <div class="max-w-7xl mx-auto">
-        <div class="reveal-up text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">Production Engine</div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-16">
-          <div class="overflow-hidden"><span class="reveal-text block">Scripting & AI Workflow</span></div>
-        </h2>
-
-        <!-- Scripting Pipeline -->
-        <div class="flex items-center gap-3 overflow-x-auto pb-4 no-scrollbar mb-12">
-          <div class="pipeline-step text-cyan-400/60">01 Research</div>
-          <div class="w-6 h-px bg-white/[0.06] shrink-0"></div>
-          <div class="pipeline-step text-blue-400/60">02 Idea</div>
-          <div class="w-6 h-px bg-white/[0.06] shrink-0"></div>
-          <div class="pipeline-step text-purple-400/60">03 Hook</div>
-          <div class="w-6 h-px bg-white/[0.06] shrink-0"></div>
-          <div class="pipeline-step text-pink-400/60">04 Script</div>
-          <div class="w-6 h-px bg-white/[0.06] shrink-0"></div>
-          <div class="pipeline-step text-emerald-400/60">05 CTA</div>
-          <div class="w-6 h-px bg-white/[0.06] shrink-0"></div>
-          <div class="pipeline-step text-amber-400/60">06 Adapt</div>
-        </div>
-
-        <!-- AI Multiplier -->
-        <div class="bento-card p-8 md:p-10 text-center mb-10">
-          <blockquote class="font-display text-2xl md:text-3xl font-bold text-white/80 leading-snug">
-            "I use AI to work faster —<br><span class="text-white/30">not to replace marketing judgment."</span>
-          </blockquote>
-          <p class="text-xs text-white/25 mt-4">Tools: ChatGPT • Claude • Google Gemini • Canva AI • SEO Acceleration</p>
-        </div>
-
-        <!-- AI Example Flow -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bento-card p-6">
-            <span class="text-[9px] font-bold text-white/20 uppercase tracking-wider">1. AI Raw Draft</span>
-            <p class="text-sm text-red-300/50 italic mt-2 leading-relaxed">"Buy tasty snacks online for healthy eating today."</p>
-            <span class="text-[10px] text-white/15 mt-2 block">Generic prompt output</span>
-          </div>
-          <div class="bento-card p-6 border-accent/10">
-            <span class="text-[9px] font-bold text-accent/50 uppercase tracking-wider">2. Human Editing</span>
-            <p class="text-sm text-cyan-200/60 font-medium mt-2 leading-relaxed">"Chai ke saath vahi purana biscuit? Try vacuum-packed fresh methi khakhra!"</p>
-            <span class="text-[10px] text-white/25 mt-2 block">Localized Gujarati chai culture hook</span>
-          </div>
-          <div class="bento-card p-6 border-emerald-500/10">
-            <span class="text-[9px] font-bold text-emerald-400/50 uppercase tracking-wider">3. Final Creative</span>
-            <p class="text-sm text-emerald-200/60 mt-2 leading-relaxed">Designed Canva banner with crisp product imagery, clear CTA & local delivery tag.</p>
-            <span class="text-[10px] text-emerald-400/30 mt-2 block">Published across client channels</span>
-          </div>
-        </div>
-
-        <div class="mt-6 p-4 rounded-xl bg-white/[0.02] border border-dashed border-white/[0.06] text-center text-xs text-white/25">
-          <strong class="text-white/40">PRINCIPLE:</strong> Every AI output is reviewed, edited and customized for the brand voice, audience and objective.
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== CONTACT ==================== -->
-    <section id="contact" class="py-32 px-6 border-t border-white/[0.04]">
-      <div class="max-w-7xl mx-auto">
-
-        <div class="max-w-3xl mb-16">
-          <div class="reveal-up text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">Let's Connect</div>
-          <h2 class="font-display text-5xl md:text-7xl font-bold tracking-tight leading-[0.95]">
-            <div class="overflow-hidden"><span class="reveal-text block">Let's Build</span></div>
-            <div class="overflow-hidden"><span class="reveal-text block text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Better Digital</span></div>
-            <div class="overflow-hidden"><span class="reveal-text block text-white/30">Experiences.</span></div>
-          </h2>
-        </div>
-
-        <div class="bento-card p-8 md:p-12">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            <div class="space-y-1">
-              <div class="text-[10px] font-semibold text-white/20 uppercase tracking-wider">Phone</div>
-              <a href="tel:+917990803065" class="text-sm font-semibold text-white/70 hover:text-accent transition-colors flex items-center gap-2">
-                <i data-lucide="phone" class="w-3.5 h-3.5 text-accent/40"></i> +91 79908 03065
-              </a>
-            </div>
-            <div class="space-y-1">
-              <div class="text-[10px] font-semibold text-white/20 uppercase tracking-wider">Email</div>
-              <a href="mailto:contact.hiteshsadhu@gmail.com" class="text-sm font-semibold text-white/70 hover:text-accent transition-colors flex items-center gap-2 truncate">
-                <i data-lucide="mail" class="w-3.5 h-3.5 text-accent/40 shrink-0"></i> contact.hiteshsadhu@gmail.com
-              </a>
-            </div>
-            <div class="space-y-1">
-              <div class="text-[10px] font-semibold text-white/20 uppercase tracking-wider">LinkedIn</div>
-              <a href="https://linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" class="text-sm font-semibold text-white/70 hover:text-accent transition-colors flex items-center gap-2">
-                <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-400/40"></i> hitesh-sadhu
-              </a>
-            </div>
-            <div class="space-y-1">
-              <div class="text-[10px] font-semibold text-white/20 uppercase tracking-wider">Location</div>
-              <div class="text-sm font-semibold text-white/70 flex items-center gap-2">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400/40"></i> Ahmedabad, Gujarat
+        <!-- Creative Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+          
+          <!-- Item 1: Ramdev 1 -->
+          <div class="gallery-card" data-category="b2b" onclick="openLightbox('assets/ramdev_creative_1.jpg', 'Ramdev Glass & Aluminium — Engineered To Impress', 'Precision, Strength, Performance creative for architectural sliding systems.')">
+            <div class="gallery-img-box">
+              <img src="assets/ramdev_creative_1.jpg" alt="Ramdev Glass Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
               </div>
             </div>
+            <div class="gallery-card-body">
+              <span class="category-badge text-blue">Manufacturing & B2B</span>
+              <h4 class="gallery-card-title">Ramdev Glass & Aluminium</h4>
+              <p class="gallery-card-sub">Engineered To Impress</p>
+            </div>
           </div>
 
-          <div class="pt-8 border-t border-white/[0.04] flex flex-wrap items-center justify-between gap-4">
-            <div class="flex flex-wrap gap-1.5">
-              <span class="tool-tag">Meta Ads Manager</span>
-              <span class="tool-tag">Canva Pro</span>
-              <span class="tool-tag">Instagram Insights</span>
-              <span class="tool-tag">ChatGPT</span>
-              <span class="tool-tag">Claude AI</span>
-              <span class="tool-tag">Gemini</span>
+          <!-- Item 2: Ramdev 2 -->
+          <div class="gallery-card" data-category="b2b" onclick="openLightbox('assets/ramdev_creative_2.jpg', 'Ramdev Glass & Aluminium — Before & After Transformation', 'Industrial B2B showcase highlighting balcony & room elevation transformations.')">
+            <div class="gallery-img-box">
+              <img src="assets/ramdev_creative_2.jpg" alt="Ramdev Transformation Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
+              </div>
             </div>
-            <div class="flex items-center gap-3">
-              <a href="https://wa.me/917990803065?text=Hello%20Hitesh" target="_blank" class="magnetic inline-flex items-center gap-2 text-xs font-semibold text-white bg-[#25D366] hover:bg-[#20bd5a] px-5 py-2.5 rounded-full transition-all duration-300">
-                <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
-              </a>
-              <a href="assets/Hitesh_Sadhu_Digital_Marketing_Portfolio.pdf" download class="magnetic inline-flex items-center gap-2 text-xs font-semibold text-dark bg-accent hover:bg-white px-5 py-2.5 rounded-full transition-all duration-300">
-                <i data-lucide="download" class="w-4 h-4"></i> Download PDF
-              </a>
+            <div class="gallery-card-body">
+              <span class="category-badge text-blue">Manufacturing & B2B</span>
+              <h4 class="gallery-card-title">Ramdev Glass & Aluminium</h4>
+              <p class="gallery-card-sub">Transformation Showcase</p>
             </div>
           </div>
+
+          <!-- Item 3: Rinkuben 1 -->
+          <div class="gallery-card" data-category="fmcg" onclick="openLightbox('assets/rinkuben_creative_1.jpg', 'Rinkuben Khakhrawala — Veda Dates Pickle', 'Rich dates blended with aromatic spices and love. Product promotional creative.')">
+            <div class="gallery-img-box">
+              <img src="assets/rinkuben_creative_1.jpg" alt="Rinkuben Veda Dates Pickle Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="category-badge text-amber">FMCG & Food</span>
+              <h4 class="gallery-card-title">Rinkuben Khakhrawala</h4>
+              <p class="gallery-card-sub">The Taste of Veda Dates Pickle</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Rinkuben 2 -->
+          <div class="gallery-card" data-category="fmcg" onclick="openLightbox('assets/rinkuben_creative_2.jpg', 'Rinkuben Khakhrawala — Butter Toast', 'Crispy. Buttery. Delicious. The Perfect Tea Time Companion promotional creative.')">
+            <div class="gallery-img-box">
+              <img src="assets/rinkuben_creative_2.jpg" alt="Rinkuben Butter Toast Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="category-badge text-amber">FMCG & Food</span>
+              <h4 class="gallery-card-title">Rinkuben Khakhrawala</h4>
+              <p class="gallery-card-sub">Crispy Buttery Toast Companion</p>
+            </div>
+          </div>
+
+          <!-- Item 5: Ekdant 1 -->
+          <div class="gallery-card" data-category="health" onclick="openLightbox('assets/ekdant_creative_1.jpg', 'Ekdant Dental Clinic — Don\'t Pull Your Tooth Like a Superhero', 'Creative healthcare awareness ad educating patients against self-extraction.')">
+            <div class="gallery-img-box">
+              <img src="assets/ekdant_creative_1.jpg" alt="Ekdant Superhero Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="category-badge text-teal">Healthcare</span>
+              <h4 class="gallery-card-title">Ekdant Dental Clinic</h4>
+              <p class="gallery-card-sub">Superhero Tooth Awareness Ad</p>
+            </div>
+          </div>
+
+          <!-- Item 6: Ekdant 2 -->
+          <div class="gallery-card" data-category="health" onclick="openLightbox('assets/ekdant_creative_2.jpg', 'Ekdant Dental Clinic — તમારા દાંત TOOLS નથી', 'Gujarati regional healthcare ad: Teeth are not tools for opening bottle caps.')">
+            <div class="gallery-img-box">
+              <img src="assets/ekdant_creative_2.jpg" alt="Ekdant Teeth are not tools Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="category-badge text-teal">Healthcare</span>
+              <h4 class="gallery-card-title">Ekdant Dental Clinic</h4>
+              <p class="gallery-card-sub">તમારા દાંત TOOLS નથી (Teeth ≠ Tools)</p>
+            </div>
+          </div>
+
+          <!-- Item 7: Fitlady 1 -->
+          <div class="gallery-card" data-category="fashion" onclick="openLightbox('assets/fitlady_creative_1.jpg', 'Fitlady Western Wear — Confidence Looks Beautiful On You', 'Modern women fashion aesthetic designed for elegance and comfort.')">
+            <div class="gallery-img-box">
+              <img src="assets/fitlady_creative_1.jpg" alt="Fitlady Confidence Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="category-badge text-purple">Fashion & Retail</span>
+              <h4 class="gallery-card-title">Fitlady Western Wear</h4>
+              <p class="gallery-card-sub">Confidence Looks Beautiful On You</p>
+            </div>
+          </div>
+
+          <!-- Item 8: Fitlady 2 -->
+          <div class="gallery-card" data-category="fashion" onclick="openLightbox('assets/fitlady_creative_2.jpg', 'Fitlady Western Wear — Fashion That Defines You', 'Retail lookbook showcase driving walk-in customers and WhatsApp orders.')">
+            <div class="gallery-img-box">
+              <img src="assets/fitlady_creative_2.jpg" alt="Fitlady Fashion That Defines You Creative" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="zoom-btn"><i data-lucide="maximize-2" class="icon-sm"></i> View</span>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="category-badge text-purple">Fashion & Retail</span>
+              <h4 class="gallery-card-title">Fitlady Western Wear</h4>
+              <p class="gallery-card-sub">Fashion That Defines You</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 06. META ADS: REAL CAMPAIGN EXPERIENCE ==================== -->
+    <section id="meta-ads" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">META ADS MANAGER • 11 / 14</span>
+          <h2 class="section-title">Meta Ads: Real Campaign Experience</h2>
+          <p class="section-desc">Hands-on exposure to Meta Ads Manager across campaign setup, audience targeting, budget planning, and performance monitoring.</p>
+        </div>
+
+        <!-- Main Live Campaign Card -->
+        <div class="ads-main-card">
+          
+          <div class="ads-card-header">
+            <div>
+              <span class="case-cat text-cyan">CAMPAIGN 01 • VIDEO AWARENESS CAMPAIGN</span>
+              <h3 class="ads-campaign-title">Fitlady Western Wear</h3>
+              <p class="case-meta">
+                Objective: <strong>Awareness</strong> • Period: <strong>8–22 June 2026</strong> • Focus: <strong>Video Awareness / Brand Reach</strong>
+              </p>
+            </div>
+            <div class="actual-data-badge">
+              <span class="pulse-dot"></span>
+              <span>ACTUAL CAMPAIGN DATA</span>
+            </div>
+          </div>
+
+          <!-- 5 Metric Boxes -->
+          <div class="ads-metrics-row">
+            
+            <div class="ad-metric-box">
+              <div class="ad-metric-value text-cyan">₹4,696.53</div>
+              <div class="ad-metric-name">Actual Spend</div>
+              <div class="ad-metric-sub">Budget: ₹5,000.00</div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill bg-cyan" style="width: 93.9%"></div>
+              </div>
+            </div>
+
+            <div class="ad-metric-box">
+              <div class="ad-metric-value text-emerald">397K+</div>
+              <div class="ad-metric-name">Total Reach</div>
+              <div class="ad-metric-sub">397,680 People</div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill bg-emerald" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div class="ad-metric-box">
+              <div class="ad-metric-value text-blue">586K+</div>
+              <div class="ad-metric-name">Impressions</div>
+              <div class="ad-metric-sub">586,929 Views</div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill bg-blue" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div class="ad-metric-box">
+              <div class="ad-metric-value text-purple">2,188</div>
+              <div class="ad-metric-name">Profile & Link Clicks</div>
+              <div class="ad-metric-sub">High Intent Actions</div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill bg-purple" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="ad-metric-box">
+              <div class="ad-metric-value text-pink">597K+</div>
+              <div class="ad-metric-name">Video Views</div>
+              <div class="ad-metric-sub">597,471 Plays</div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill bg-pink" style="width: 100%"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Campaign Setup & Learnings -->
+          <div class="ads-insights-grid">
+            
+            <div class="insight-box">
+              <h4 class="insight-title text-cyan">
+                <i data-lucide="sliders" class="icon-sm"></i>
+                <span>CAMPAIGN SETUP & MY ROLE</span>
+              </h4>
+              <ul class="insight-list">
+                <li><strong>Targeting:</strong> Women demographic within Kadi and surrounding regional radius.</li>
+                <li><strong>Creative Selection:</strong> Paired high-tempo western wear lookbook video reels.</li>
+                <li><strong>Budget Management:</strong> Controlled daily spend pace across 14-day flight (Spent ₹4,696.53 / Remaining ₹303.47 discipline).</li>
+                <li><strong>Responsibilities:</strong> Campaign creation, awareness objective selection, audience targeting, creative testing, and delivery monitoring.</li>
+              </ul>
+            </div>
+
+            <div class="insight-box">
+              <h4 class="insight-title text-emerald">
+                <i data-lucide="lightbulb" class="icon-sm"></i>
+                <span>WHAT I MONITORED & LEARNED</span>
+              </h4>
+              <ul class="insight-list">
+                <li><strong>Awareness Focus:</strong> Attention placed on unique reach and frequency rather than immediate conversions.</li>
+                <li><strong>Video Consumption:</strong> Video views (597K+) provided clear feedback on audience retention.</li>
+                <li><strong>Local Matching:</strong> Audience location targeting ensured regional store relevance.</li>
+                <li><strong>Objective Alignment:</strong> Monitored delivery health strictly against the selected awareness goal.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Campaign 02 & Practical Capabilities Grid -->
+        <div class="b2b-capabilities-grid">
+          
+          <!-- Campaign 02 Card -->
+          <div class="b2b-campaign-card">
+            <span class="case-cat text-blue">CAMPAIGN 02 • B2B / INDUSTRIAL ADVERTISING</span>
+            <h3 class="b2b-title">Ramdev Glass & Aluminium — Warehouse Space Promotion</h3>
+            <p class="b2b-desc">
+              Structured targeted ads to promote available commercial warehouse space for lease to regional logistics and business operators across Kadi and neighboring industrial hubs.
+            </p>
+            <div class="scope-box">
+              <span class="text-cyan font-bold">My Practical Scope of Work:</span>
+              <p>Campaign planning • Audience targeting • Geo-radius selection • Budget planning • Creative format selection • Primary ad copy drafting • Campaign setup & active monitoring.</p>
+            </div>
+            <p class="footnote">* Performance data not included — campaign experience documented from campaign setup, targeting configuration and active execution.</p>
+          </div>
+
+          <!-- 4 Execution Capabilities -->
+          <div class="capabilities-grid">
+            
+            <div class="capability-box">
+              <div class="cap-header text-cyan">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>01. Setup & Structure</span>
+              </div>
+              <p class="cap-text">Campaign objective selection (Awareness & Video Views), campaign hierarchy & budget caps.</p>
+            </div>
+
+            <div class="capability-box">
+              <div class="cap-header text-emerald">
+                <i data-lucide="crosshair" class="icon-sm"></i>
+                <span>02. Audience Targeting</span>
+              </div>
+              <p class="cap-text">Demographic profiling (women/regional), geo-radius mapping around Kadi & industrial centers.</p>
+            </div>
+
+            <div class="capability-box">
+              <div class="cap-header text-amber">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>03. Budget Pacing</span>
+              </div>
+              <p class="cap-text">Controlled daily spend pace across 14-day flight (₹4,696.53 spent / ₹303.47 remaining discipline).</p>
+            </div>
+
+            <div class="capability-box">
+              <div class="cap-header text-purple">
+                <i data-lucide="play-circle" class="icon-sm"></i>
+                <span>04. Creative & Delivery</span>
+              </div>
+              <p class="cap-text">High-tempo lookbook video pairing, tracking 586K+ impressions & 597K+ video plays.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 07. REEL SCRIPTING & AI WORKFLOW ==================== -->
+    <section id="scripting-ai" class="section section-alt">
+      <div class="container">
+        
+        <!-- Scripting Engine (Page 12) -->
+        <div class="section-header">
+          <span class="section-tag">PRODUCTION ENGINE & METHODOLOGY • 12 / 14</span>
+          <h2 class="section-title">Content Creation & Reel Scripting Engine</h2>
+          <p class="section-desc">A practical workflow I use to develop attention-grabbing hooks, viral scripts, visuals, and conversion CTAs for short-form content.</p>
+        </div>
+
+        <!-- 6-step loop horizontal strip -->
+        <div class="pipeline-strip">
+          <div class="pipeline-item text-cyan"><span class="pipeline-badge">01</span> RESEARCH</div>
+          <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+          <div class="pipeline-item text-blue"><span class="pipeline-badge">02</span> IDEA</div>
+          <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+          <div class="pipeline-item text-purple"><span class="pipeline-badge">03</span> HOOK</div>
+          <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+          <div class="pipeline-item text-pink"><span class="pipeline-badge">04</span> SCRIPT</div>
+          <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+          <div class="pipeline-item text-emerald"><span class="pipeline-badge">05</span> CTA</div>
+          <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+          <div class="pipeline-item text-amber"><span class="pipeline-badge">06</span> ADAPT</div>
+        </div>
+
+        <div class="scripting-banner">
+          ★ 100% Original Scripting: All video hooks, narrative structures & spoken dialogues authored by Hitesh Sadhu
+        </div>
+
+        <!-- 4 Hook Frameworks Cards -->
+        <div class="hook-grid">
+          
+          <div class="hook-card">
+            <div class="hook-card-header">
+              <span class="hook-cat text-pink">01. CURIOSITY & LOCAL CULTURE</span>
+              <span class="hook-badge">Entertainment & Cinema</span>
+            </div>
+            <h4 class="hook-title">Regional Resonance Hook</h4>
+            <p class="hook-desc"><strong>Strategy & Execution:</strong> Taps into regional cultural pride, relatable Gujarati dialog, and conversational curiosity to hook the viewer within the opening 3 seconds.</p>
+            <div class="hook-trigger">
+              ⚡ <strong>Engagement Trigger:</strong> Cultural resonance + curiosity gap preventing viewers from swiping away before the punchline.
+            </div>
+          </div>
+
+          <div class="hook-card">
+            <div class="hook-card-header">
+              <span class="hook-cat text-teal">02. PROBLEM AWARENESS & URGENCY</span>
+              <span class="hook-badge">Healthcare & Medical</span>
+            </div>
+            <h4 class="hook-title">Health Clarity & Doctor Authority</h4>
+            <p class="hook-desc"><strong>Strategy & Execution:</strong> Identifies common daily dental misconceptions, subtle tooth pain signs, or brushing mistakes that prompt viewers to seek clarity.</p>
+            <div class="hook-trigger">
+              ⚡ <strong>Engagement Trigger:</strong> Personal health relevance + doctor authority that drives high watch time and saves.
+            </div>
+          </div>
+
+          <div class="hook-card">
+            <div class="hook-card-header">
+              <span class="hook-cat text-amber">03. SENSORY & APPETITE APPEAL</span>
+              <span class="hook-badge">Food & Hospitality</span>
+            </div>
+            <h4 class="hook-title">Audio Sizzle & Taste Triggers</h4>
+            <p class="hook-desc"><strong>Strategy & Execution:</strong> Combines appetizing visual crunch, sizzle audio cues, and authentic preparation visuals to trigger sensory craving and instant footfall.</p>
+            <div class="hook-trigger">
+              ⚡ <strong>Engagement Trigger:</strong> Sensory hunger trigger + immediate WhatsApp ordering CTA in the bio.
+            </div>
+          </div>
+
+          <div class="hook-card">
+            <div class="hook-card-header">
+              <span class="hook-cat text-purple">04. RAPID TRANSFORMATION</span>
+              <span class="hook-badge">Fashion & Lifestyle</span>
+            </div>
+            <h4 class="hook-title">Snappy Lookbook Styling</h4>
+            <p class="hook-desc"><strong>Strategy & Execution:</strong> Showcases outfit versatility, dynamic beat-matched transitions, and real-time occasion styling to deliver instant visual value.</p>
+            <div class="hook-trigger">
+              ⚡ <strong>Engagement Trigger:</strong> Fast visual pacing + aspirational styling utility that maximizes profile visits.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4 Reel Pillars -->
+        <div class="reel-pillars-grid">
+          <div class="pillar-box">
+            <div class="pillar-title text-cyan">▷ 3-Second Hooks</div>
+            <p class="pillar-desc">Clear question, movement, or problem statement early to stop scrolling.</p>
+          </div>
+          <div class="pillar-box">
+            <div class="pillar-title text-emerald">🔲 Mute Optimization</div>
+            <p class="pillar-desc">On-screen text so the core message is 100% understandable without sound.</p>
+          </div>
+          <div class="pillar-box">
+            <div class="pillar-title text-purple">🔖 Save & Share CTAs</div>
+            <p class="pillar-desc">Reference-worthy utility prompting viewers to bookmark or share.</p>
+          </div>
+          <div class="pillar-box">
+            <div class="pillar-title text-pink">⏱ Seamless Loops</div>
+            <p class="pillar-desc">Ending connects naturally with the opening for repeated views.</p>
+          </div>
+        </div>
+
+        <!-- AI Hybrid Workflow (Page 13) -->
+        <div class="ai-section-wrap">
+          
+          <div class="section-header">
+            <span class="section-tag">HYBRID WORKFLOW • 13 / 14</span>
+            <h2 class="section-title">AI × Digital Marketing Multiplier</h2>
+            <p class="section-desc">Using artificial intelligence as a speed and productivity multiplier while maintaining human creative judgment.</p>
+          </div>
+
+          <div class="ai-quote-box">
+            <blockquote class="ai-quote">
+              “I use AI to work faster — not to replace marketing judgment.”
+            </blockquote>
+            <p class="ai-tools">Tools: ChatGPT • Claude AI • Google Gemini • Canva AI Features • SEO & Search Acceleration</p>
+          </div>
+
+          <!-- 4 Phase Grid -->
+          <div class="ai-phase-grid">
+            <div class="ai-phase-card">
+              <span class="ai-phase-num text-cyan">01 CONTENT IDEATION</span>
+              <p class="ai-phase-desc">Generating multiple reel concepts, conversational hooks, and seasonal topic angles.</p>
+            </div>
+            <div class="ai-phase-card">
+              <span class="ai-phase-num text-blue">02 SCRIPTING & COPY</span>
+              <p class="ai-phase-desc">Drafting first-cut scripts, captions, CTA variations, and headline alternatives.</p>
+            </div>
+            <div class="ai-phase-card">
+              <span class="ai-phase-num text-purple">03 CREATIVE DEVELOPMENT</span>
+              <p class="ai-phase-desc">Assisting with visual concept ideation, layout wireframes, and color combinations.</p>
+            </div>
+            <div class="ai-phase-card">
+              <span class="ai-phase-num text-emerald">04 RESEARCH SUPPORT</span>
+              <p class="ai-phase-desc">Conducting competitor research, audience persona brainstorming, and terminology synthesis.</p>
+            </div>
+          </div>
+
+          <!-- Practical Prompt Comparison Example -->
+          <div class="prompt-transformation-card">
+            <div class="prompt-card-title">PRACTICAL WORKFLOW EXAMPLE: AI IDEA TO FINAL CREATIVE</div>
+            <div class="prompt-grid">
+              
+              <div class="prompt-step-box">
+                <span class="prompt-step-label text-muted">1. AI IDEA DRAFT</span>
+                <p class="prompt-quote-raw">"Buy tasty snacks online for healthy eating today."</p>
+                <span class="prompt-note">Generic raw prompt output</span>
+              </div>
+
+              <div class="prompt-step-box border-cyan">
+                <span class="prompt-step-label text-cyan">2. HUMAN EDITING & BRAND TONE</span>
+                <p class="prompt-quote-human">"Chai ke saath vahi purana biscuit? Try vacuum-packed fresh methi khakhra!"</p>
+                <span class="prompt-note">Localized Gujarati chai culture hook</span>
+              </div>
+
+              <div class="prompt-step-box border-emerald">
+                <span class="prompt-step-label text-emerald">3. FINAL CREATIVE ASSET</span>
+                <p class="prompt-quote-final">Designed Canva banner with crisp product imagery, clear CTA & local delivery tag.</p>
+                <span class="prompt-note">Published across client channels</span>
+              </div>
+
+            </div>
+
+            <div class="core-principle-banner">
+              <strong>CORE PRINCIPLE:</strong> “Every AI-assisted output is reviewed, edited and customized according to the brand voice, target audience and marketing objective.”
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 08. CONTACT & CLOSING ==================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        
+        <div class="closing-card">
+          
+          <div class="closing-header">
+            <span class="section-tag">COLLABORATION & GROWTH • 14 / 14</span>
+            <h2 class="closing-title">
+              LET'S BUILD <br>
+              <span class="gradient-text">BETTER DIGITAL EXPERIENCES.</span>
+            </h2>
+            <blockquote class="closing-quote">
+              “I am looking for an opportunity where I can contribute my practical digital marketing experience, learn from an experienced creative team, and grow into a reliable, high-output social media professional.”
+            </blockquote>
+          </div>
+
+          <!-- 4 Pillars What I Bring -->
+          <div class="pillars-row">
+            <div class="pillar-item">
+              <h4 class="pillar-h text-cyan">01. End-to-End Social Execution</h4>
+              <p class="pillar-p">From business analysis and profile makeovers to monthly content planning, Canva graphics, captions & posting.</p>
+            </div>
+            <div class="pillar-item">
+              <h4 class="pillar-h text-blue">02. Creative Scripting & Hooks</h4>
+              <p class="pillar-p">Original reel scripts, 3-second attention hooks, and conversational spoken dialog in Gujarati and Hindi.</p>
+            </div>
+            <div class="pillar-item">
+              <h4 class="pillar-h text-emerald">03. Practical Meta Ads Exposure</h4>
+              <p class="pillar-p">Hands-on experience in Meta Ads Manager: campaign creation, geo-radius targeting, and daily spend pacing.</p>
+            </div>
+            <div class="pillar-item">
+              <h4 class="pillar-h text-purple">04. AI-Accelerated Productivity</h4>
+              <p class="pillar-p">Leveraging ChatGPT & Gemini for rapid research and ideation while maintaining strict human editorial standards.</p>
+            </div>
+          </div>
+
+          <!-- Direct Contact Box -->
+          <div class="contact-box-main">
+            
+            <div class="contact-box-top">
+              <div class="contact-profile-meta">
+                <img src="assets/hitesh-dp.png" alt="Hitesh Sadhu" class="contact-avatar">
+                <div>
+                  <h3 class="contact-hitesh">HITESH SADHU</h3>
+                  <p class="contact-spec text-cyan">Social Media & Digital Marketing</p>
+                </div>
+              </div>
+              <span class="badge-immediate">IMMEDIATE AVAILABILITY</span>
+            </div>
+
+            <!-- Details Grid -->
+            <div class="contact-details-grid">
+              
+              <div class="contact-cell">
+                <span class="cell-label">PHONE</span>
+                <a href="tel:+917990803065" class="cell-value">
+                  <i data-lucide="phone" class="icon-sm text-cyan"></i>
+                  <span>+91 79908 03065</span>
+                </a>
+                <button onclick="copyToClipboard('+917990803065', 'Phone number copied!')" class="copy-action">Copy Number</button>
+              </div>
+
+              <div class="contact-cell">
+                <span class="cell-label">EMAIL</span>
+                <a href="mailto:contact.hiteshsadhu@gmail.com" class="cell-value truncate">
+                  <i data-lucide="mail" class="icon-sm text-cyan"></i>
+                  <span class="truncate">contact.hiteshsadhu@gmail.com</span>
+                </a>
+                <button onclick="copyToClipboard('contact.hiteshsadhu@gmail.com', 'Email copied!')" class="copy-action">Copy Email</button>
+              </div>
+
+              <div class="contact-cell">
+                <span class="cell-label">LINKEDIN</span>
+                <a href="https://linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" rel="noopener noreferrer" class="cell-value">
+                  <i data-lucide="linkedin" class="icon-sm text-blue"></i>
+                  <span>linkedin.com/in/hitesh-sadhu</span>
+                </a>
+                <a href="https://linkedin.com/in/hitesh-sadhu-027b4342b" target="_blank" rel="noopener noreferrer" class="copy-action">Open Profile →</a>
+              </div>
+
+              <div class="contact-cell">
+                <span class="cell-label">LOCATION</span>
+                <div class="cell-value">
+                  <i data-lucide="map-pin" class="icon-sm text-emerald"></i>
+                  <span>Ahmedabad, Gujarat</span>
+                </div>
+                <span class="cell-sub">Available for In-Person Work</span>
+              </div>
+
+            </div>
+
+            <!-- Toolkit -->
+            <div class="toolkit-row">
+              <span class="toolkit-label">PRACTICAL TOOLKIT:</span>
+              <div class="toolkit-tags">
+                <span class="tool-tag">Meta Ads Manager</span>
+                <span class="tool-tag">Meta Business Suite</span>
+                <span class="tool-tag">Canva Pro</span>
+                <span class="tool-tag">Instagram Insights</span>
+                <span class="tool-tag">ChatGPT</span>
+                <span class="tool-tag">Claude AI</span>
+                <span class="tool-tag">Google Gemini</span>
+                <span class="tool-tag">SEO & GEO Optimization</span>
+                <span class="tool-tag">Sheets & Docs</span>
+              </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="contact-actions-row">
+              <span class="footer-candidate-tag">Candidate Portfolio • Social Media & Digital Marketing • Ahmedabad, Gujarat</span>
+              <div class="action-btn-group">
+                <a href="https://wa.me/917990803065?text=Hello%20Hitesh,%20I%20reviewed%20your%20portfolio" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                  <i data-lucide="message-circle" class="icon-sm"></i>
+                  <span>WhatsApp Chat</span>
+                </a>
+                <a href="assets/Hitesh_Sadhu_Digital_Marketing_Portfolio.pdf" download="Hitesh_Sadhu_Digital_Marketing_Portfolio.pdf" class="btn-primary">
+                  <i data-lucide="download" class="icon-sm"></i>
+                  <span>Download PDF Deck</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -716,36 +1625,37 @@
 
   </main>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" class="fixed inset-0 z-[60] hidden bg-black/95 backdrop-blur-2xl flex items-center justify-center p-6 cursor-pointer" onclick="closeLightbox()">
-    <button class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-      <i data-lucide="x" class="w-5 h-5"></i>
+  <!-- LIGHTBOX MODAL FOR CREATIVES -->
+  <div id="lightbox" class="lightbox-modal hidden" onclick="handleLightboxClick(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" title="Close (ESC)">
+      <i data-lucide="x" class="icon-md"></i>
     </button>
-    <img id="lightbox-img" src="" alt="Preview" class="max-w-full max-h-[85vh] rounded-xl object-contain">
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Creative Preview" class="lightbox-image">
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title" class="lightbox-caption-title"></h3>
+        <p id="lightbox-desc" class="lightbox-caption-desc"></p>
+      </div>
+    </div>
   </div>
 
-  <!-- TOAST -->
-  <div id="toast" class="fixed bottom-6 right-6 z-[70] hidden px-4 py-2.5 rounded-xl bg-card border border-accent/20 text-accent text-xs font-medium shadow-2xl">
-    <span id="toast-msg">Copied!</span>
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div id="toast" class="toast-box hidden">
+    <i data-lucide="check-circle-2" class="icon-sm text-cyan"></i>
+    <span id="toast-msg">Copied to clipboard!</span>
   </div>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/[0.04] py-8 px-6 text-center text-xs text-white/15">
-    © 2026 Hitesh Sadhu • Social Media & Digital Marketing Portfolio
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Hitesh Sadhu • Social Media & Digital Marketing Portfolio. Hosted globally on Vercel.</p>
+    </div>
   </footer>
 
-  <!-- ==================== SCRIPTS ==================== -->
-  <!-- Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <!-- VanillaTilt for 3D card tilt -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-  <!-- Lenis Smooth Scroll -->
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- App Logic -->
+  <!-- Scripts -->
   <script src="app.js"></script>
-  <script>lucide.createIcons();</script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
