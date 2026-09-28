@@ -63,6 +63,8 @@ html {
 
 body {
   background-color: var(--bg-main);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.065) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--text-primary);
   overflow-x: hidden;
   position: relative;
@@ -107,7 +109,9 @@ body {
 }
 
 .section-alt {
-  background: #ffffff;
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -1097,6 +1101,29 @@ body {
   background: #0f172a;
   border-color: #0f172a;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.tab-name {
+  font-weight: 600;
+}
+
+.tab-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: #f1f5f9;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active .tab-badge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .tab-indicator {
